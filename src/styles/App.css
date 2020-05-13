@@ -166,6 +166,7 @@ html {
 .main-button:active,
 .main-button:focus {
   color: var(--blue-1000);
+  cursor: pointer;
 }
 
 .main-button:hover::before,
