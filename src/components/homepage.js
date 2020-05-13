@@ -4,11 +4,13 @@ import MainMap from './MainMap'
 export default function Homepage() {
       return (
           <div>
-            <h1 id="">KindCard</h1>
-             <h2 id="">Every Act Mapped.</h2>
+            <h1 id="brand">KindCard</h1>
+             <h2 id="tagline">Every Act Mapped.</h2>
              <MainMap />
-             <button>Enter Your Card</button>
-             <button>View Random Card</button>
+             <div id="main-button-container">
+                <button className="main-button">Enter your card &rarr;</button> 
+                <button className="main-button">View random card &rarr;</button>
+             </div>
           </div> 
       );
   }
