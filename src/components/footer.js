@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Footer() {
       return (
-          <div>
-            KindCard | 2020
+          <div id="footer">
+            &copy; {new Date().getFullYear()} | KindCard
           </div> 
       );
   }
