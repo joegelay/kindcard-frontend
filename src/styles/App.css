@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+:root {
+  --blue-1000: #003E6B;
+  --blue-900: #0A558C;
+  --blue-800: #0F609B;
+  --blue-700: #186FAF;
+  --blue-600: #2680C2;
+  --blue-500: #4098D7;
+  --blue-400: #62B0E8;
+  --blue-300: #84C5F4;
+  --blue-200: #B6E0FE;
+  --blue-100: #DCEEFB;
+
+  --yellow-1000: #8D2B0B;
+  --yellow-900: #B44D12;
+  --yellow-800: #CB6E17;
+  --yellow-700: #DE911D;
+  --yellow-600: #F0B429;
+  --yellow-500: #F7C948;
+  --yellow-400: #FADB5F;
+  --yellow-300: #FCE588;
+  --yellow-200: #FFF3C4;
+  --yellow-100: #FFFBEA;
+
+  --neutral-1000: #102A43;
+  --neutral-900: #243B53;
+  --neutral-800: #334E68;
+  --neutral-700: #486581;
+  --neutral-600: #627D98;
+  --neutral-500: #829AB1;
+  --neutral-400: #9FB3C8;
+  --neutral-300: #BCCCDC;
+  --neutral-200: #D9E2EC;
+  --neutral-100: #F0F4F8;
+
+  --teal-1000: #044E54;
+  --teal-900: #0A6C74;
+  --teal-800: #0E7C86;
+  --teal-700: #14919B;
+  --teal-600: #2CB1BC;
+  --teal-500: #38BEC9;
+  --teal-400: #54D1DB;
+  --teal-300: #87EAF2;
+  --teal-200: #BEF8FD;
+  --teal-100: #E0FCFF;
+
+  --red-1000: #610404;
+  --red-900: #780A0A;
+  --red-800: #911111;
+  --red-700: #A61B1B;
+  --red-600: #BA2525;
+  --red-500: #D64545;
+  --red-300: #E66A6A;
+  --red-400: #F29B9B;
+  --red-200: #FACDCD;
+  --red-100: #FFEEEE;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  background-color: blue;
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* 
+BackgroundSolid = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: ${props =>
+    `linear-gradient(to bottom right, ${props.theme.colors.primary.base},${
+      props.theme.colors.primary.dark
+    })`};
+  z-index: 20;
+  box-shadow: -3px 0 20px rgba(56, 56, 56, 0.2); */
