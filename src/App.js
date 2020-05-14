@@ -5,14 +5,22 @@ import Homepage from './components/homepage'
 import Footer from './components/footer'
 import Header from './components/header'
 
-function App() {
-  return (
+class App extends React.Component {
+  state = { 
+    markerPosition: { 
+      lat: 49.8419, lng: 24.0315 
+    } 
+  };
+
+  render() {
+    return (
     <div className="App">
       <Header />
-      <Homepage />
+      <Homepage markerPosition={this.state.markerPosition}/>
       <Footer />
     </div>
   );
+    }
 }
 
 export default App;
