@@ -1,5 +1,4 @@
 import React from 'react'
-import profileIcon from '../images/001-user.svg'
 
 export default function Header() {
       return (

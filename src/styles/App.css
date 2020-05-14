@@ -108,7 +108,7 @@ html {
   margin-bottom: 1.5rem;
 }
 
-#main-map {
+#map {
   border: 2px solid var(--red-1000);
   width: 120vh;
   height: 50vh;
