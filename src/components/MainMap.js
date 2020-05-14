@@ -13,7 +13,17 @@ class Map extends React.Component {
       ]
     });
 
-    this.marker = L.marker(this.props.markerPosition).addTo(this.map);
+    // this.marker = L.marker(this.props.markerPosition).addTo(this.map);
+
+    this.layer = L.layerGroup().addTo(this.map);
+    this.updateMarkers(this.props.markersData);
+  }
+
+  updateMarkers(markersData) {
+    this.layer.clearLayers();
+    markersData.forEach(marker => {
+      L.marker(marker.latLng, { title: marker.title }).addTo(this.layer);
+    });
   }
 
   render() {
