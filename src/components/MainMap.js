@@ -1,4 +1,5 @@
 import React from 'react'
+import { Route, NavLink, HashRouter } from "react-router-dom";
 import L from 'leaflet';
 import customIcon from '../images/marker-icon-gold.png'
 import markerShadow from '../images/marker-shadow.png'
@@ -38,10 +39,12 @@ class Map extends React.Component {
     this.layer.clearLayers();
     markersData.forEach(story => {
       L.marker([story.lat, story.lng], {icon: goldIcon}).bindPopup(`
-      <h1>KindCard #${story.number}</h1><br><a href='http://localhost:4000/cards/${story.cardId}' target=_blank>Read stories</a>`)
+      <h1>KindCard #${story.number}</h1><br><${NavLink} to="/cardPage">Read stories</${NavLink}>`)
       .addTo(this.layer);
     });
   }
+
+
   
 
   render() {

@@ -3,6 +3,7 @@ import { Route, NavLink, HashRouter } from "react-router-dom";
 import './styles/reset.css';
 import './styles/App.css';
 import Homepage from './components/homepage'
+import cardPage from './components/cardPage'
 
 class App extends React.Component {
   state = { 
@@ -21,11 +22,22 @@ class App extends React.Component {
 
   render() {
     return (
-    <div className="App">
-      <Homepage markersData={this.state.markersData}/>
-    </div>
+      <HashRouter>  
+        <div className="App">
+
+          <Route path="/" render={props => 
+            (<Homepage {...props} markersData={this.state.markersData}/>)
+          }/>
+          <Route path="/cardPage" component={cardPage}/>
+          
+        </div>
+      </HashRouter>
   );
-    }
 }
+}
+
+
+
+{/* <Homepage markersData={this.state.markersData}/> */}
 
 export default App;
