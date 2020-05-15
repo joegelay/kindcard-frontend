@@ -38,7 +38,7 @@ class Map extends React.Component {
     this.layer.clearLayers();
     markersData.forEach(story => {
       L.marker([story.lat, story.lng], {icon: goldIcon}).bindPopup(`
-      <h1>KindCard #${story.number}</h1><br><a href='http://localhost:4000/stories/${story.id}' target=_blank>Read stories</a>`)
+      <h1>KindCard #${story.number}</h1><br><a href='http://localhost:4000/cards/${story.cardId}' target=_blank>Read stories</a>`)
       .addTo(this.layer);
     });
   }
