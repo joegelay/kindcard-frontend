@@ -1,10 +1,10 @@
 import React from 'react'
 import L from 'leaflet';
-import goldIcon from '../images/marker-icon-gold.png'
+import customIcon from '../images/marker-icon-gold.png'
 import markerShadow from '../images/marker-shadow.png'
 
-const greenIcon = new L.Icon({
-  iconUrl: goldIcon,
+const goldIcon = new L.Icon({
+  iconUrl: customIcon,
   shadowUrl: markerShadow,
   iconSize: [25, 41],
   iconAnchor: [12, 41],
@@ -15,7 +15,7 @@ const greenIcon = new L.Icon({
 class Map extends React.Component {
   componentDidMount() {
     this.map = L.map('map', {
-      center: [39.810, -30.988],
+      center: [19.810, 0],
       zoom: 2,
       layers: [
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -24,17 +24,23 @@ class Map extends React.Component {
       ]
     });
 
-  
     this.layer = L.layerGroup().addTo(this.map);
     this.updateMarkers(this.props.markersData);
+  }
+
+  componentDidUpdate({ markersData }) {
+    if (this.props.markersData !== markersData) {
+      this.updateMarkers(this.props.markersData);
+    }
   }
 
   updateMarkers(markersData) {
     this.layer.clearLayers();
     markersData.forEach(marker => {
-      L.marker(marker.latLng, {icon: greenIcon}).bindPopup("<b>Hello world!</b><br>I am a popup.").addTo(this.layer);
+      L.marker([marker.lat, marker.lng], {icon: goldIcon}).bindPopup(`<h1>${marker.title}</h1>`).addTo(this.layer);
     });
   }
+  
 
   render() {
     return <div id="map"></div>

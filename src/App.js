@@ -7,11 +7,18 @@ import Header from './components/header'
 
 class App extends React.Component {
   state = { 
-    markersData: [
-      { latLng: { lat: 49.8419, lng: 24.0315 }, title: 1 }, 
-      { latLng: { lat: 49.8419, lng: 24.1315 }, title: 2 }, 
-    ] 
+    markersData: []
   };
+
+  componentDidMount(){
+    fetch('http://localhost:4000/cards')
+      .then(response => response.json())
+      .then(cards => {
+        this.setState({
+          markersData: cards.cards
+        })
+      })
+  }
 
   render() {
     return (

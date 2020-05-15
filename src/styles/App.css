@@ -98,20 +98,20 @@ html {
   margin-top: -1rem;
 
   color: var(--neutral-100);
-  font-size: 6rem;
+  font-size: 5.5rem;
 }
 
 #tagline {
   color: var(--neutral-100);
-  font-size: 2rem;
+  font-size: 1.5rem;
 
   margin-bottom: 1.5rem;
 }
 
 #map {
-  border: 2px solid var(--red-1000);
-  width: 120vh;
-  height: 50vh;
+  border: 2px solid var(--blue-1000);
+  width: 140vh;
+  height: 55vh;
 
   display: flex;
   justify-content: center;
