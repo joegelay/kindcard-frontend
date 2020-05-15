@@ -11,11 +11,11 @@ class App extends React.Component {
   };
 
   componentDidMount(){
-    fetch('http://localhost:4000/cards')
+    fetch('http://localhost:4000/stories')
       .then(response => response.json())
-      .then(cards => {
+      .then(stories => {
         this.setState({
-          markersData: cards.cards
+          markersData: stories.stories
         })
       })
   }
