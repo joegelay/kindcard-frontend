@@ -59,6 +59,15 @@ import { Icon } from "leaflet";
 import customIcon from '../images/marker-icon-gold.png'
 import markerShadow from '../images/marker-shadow.png'
 
+const goldIcon = new Icon({
+  iconUrl: customIcon,
+  shadowUrl: markerShadow,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+
 export default function MainMap(props) {
   const [activeStory, setActiveStory] = React.useState(null);
 
@@ -76,6 +85,7 @@ export default function MainMap(props) {
           onClick={() => {
             setActiveStory(story)
           }}
+          icon={goldIcon}
           />
       ))}
 
