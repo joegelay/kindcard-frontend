@@ -60,7 +60,7 @@ import customIcon from '../images/marker-icon-gold.png'
 import markerShadow from '../images/marker-shadow.png'
 
 export default function MainMap(props) {
-  const [activePark, setActivePark] = React.useState(null);
+  const [activeStory, setActiveStory] = React.useState(null);
 
   return (
     <Map center={[19.810, 0]} zoom={2}>
@@ -70,8 +70,26 @@ export default function MainMap(props) {
       />
 
       {props.markersData.map(story => (
-      <Marker key={story.id} position={[story.lat, story.lng]} />
+        <Marker 
+          key={story.id} 
+          position={[story.lat, story.lng]} 
+          onClick={() => {
+            setActiveStory(story)
+          }}
+          />
       ))}
+
+      {activeStory && (
+        <Popup 
+          position={[activeStory.lat, activeStory.lng]} 
+          onClose={() => {
+            setActiveStory(null)
+          }}
+        >
+          <div>
+            <h1>KindCard #{activeStory.number}</h1>
+          </div>
+        </Popup>)}
     </Map>
   );
 }
