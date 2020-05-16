@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, NavLink, HashRouter } from "react-router-dom";
+import { Route, HashRouter } from "react-router-dom";
 import './styles/reset.css';
 import './styles/App.css';
 import Homepage from './components/homepage'
@@ -25,19 +25,15 @@ class App extends React.Component {
       <HashRouter>  
         <div className="App">
 
-          <Route path="/" render={props => 
+          <Route exact path="/" render={props => 
             (<Homepage {...props} markersData={this.state.markersData}/>)
           }/>
-          <Route path="/cardPage" component={cardPage}/>
+          <Route path="/cards" component={cardPage}/>
           
         </div>
       </HashRouter>
-  );
+    );
+  }
 }
-}
-
-
-
-{/* <Homepage markersData={this.state.markersData}/> */}
 
 export default App;

@@ -222,3 +222,15 @@ html {
   padding: 1rem 1rem 0rem 1rem;
   text-align: center;
 }
+
+.leaflet-container {
+  border: 2px solid var(--blue-1000);
+  width: 140vh;
+  height: 55vh;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  margin-bottom: 2rem;
+}
