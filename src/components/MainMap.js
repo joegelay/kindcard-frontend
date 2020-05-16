@@ -1,17 +1,3 @@
-// import React from 'react'
-// import L from 'leaflet';
-// import customIcon from '../images/marker-icon-gold.png'
-// import markerShadow from '../images/marker-shadow.png'
-
-// const goldIcon = new L.Icon({
-//   iconUrl: customIcon,
-//   shadowUrl: markerShadow,
-//   iconSize: [25, 41],
-//   iconAnchor: [12, 41],
-//   popupAnchor: [1, -34],
-//   shadowSize: [41, 41]
-// });
-
 // class Map extends React.Component {
 //   componentDidMount() {
 //     this.map = L.map('map', {
@@ -55,6 +41,7 @@
 
 import React from "react";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
+import { NavLink } from "react-router-dom";
 import { Icon } from "leaflet";
 import customIcon from '../images/marker-icon-gold.png'
 import markerShadow from '../images/marker-shadow.png'
@@ -98,6 +85,7 @@ export default function MainMap(props) {
         >
           <div>
             <h1>KindCard #{activeStory.number}</h1>
+            <NavLink to="/cards">Cards</NavLink>
           </div>
         </Popup>)}
     </Map>
