@@ -1,44 +1,3 @@
-// class Map extends React.Component {
-//   componentDidMount() {
-//     this.map = L.map('map', {
-//       center: [19.810, 0],
-//       zoom: 2,
-//       layers: [
-//         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-//           attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-//         }),
-//       ]
-//     });
-
-//     this.layer = L.layerGroup().addTo(this.map);
-//     this.updateMarkers(this.props.markersData);
-//   }
-
-//   componentDidUpdate({ markersData }) {
-//     if (this.props.markersData !== markersData) {
-//       this.updateMarkers(this.props.markersData);
-//     }
-//   }
-
-//   updateMarkers(markersData) {
-//     this.layer.clearLayers();
-//     markersData.forEach(story => {
-//       L.marker([story.lat, story.lng], {icon: goldIcon}).bindPopup(
-//         `
-//         <h1>KindCard #${story.number}</h1><br><a href='${
-//           window.location.protocol + "//" + window.location.host
-//         }/cards/'>Read stories</a>`)
-//         .addTo(this.layer);
-//       });
-//   }
-    
-//   render() {
-//     return <div id="map"></div>
-//   }
-// }
-
-// export default Map;
-
 import React from "react";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
 import { NavLink } from "react-router-dom";
@@ -59,6 +18,7 @@ export default function MainMap(props) {
   const [activeStory, setActiveStory] = React.useState(null);
 
   return (
+    <div className="map-container">
     <Map center={[19.810, 0]} zoom={2}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -89,5 +49,6 @@ export default function MainMap(props) {
           </div>
         </Popup>)}
     </Map>
+    </div>
   );
 }
