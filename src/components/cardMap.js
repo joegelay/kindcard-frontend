@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
-import { NavLink } from "react-router-dom";
 import { Icon } from "leaflet";
 import customIcon from '../images/marker-icon-gold.png'
 import markerShadow from '../images/marker-shadow.png'
@@ -14,17 +13,28 @@ const goldIcon = new Icon({
   shadowSize: [41, 41]
 });
 
-export default function CardMap(props) {
-  const [activeStory, setActiveStory] = React.useState(null);
+export default function CardMap() {
+  const [markersData, setMarkersData] = useState([]);
+  const [activeStory, setActiveStory] = useState(null);
+  const cardNumber = window.location.hash.replace("#/cards/", "")
+
+  useEffect(() => {
+    fetch(`http://localhost:4000/cards/${cardNumber}`)
+      .then(response => response.json())
+      .then(result => {
+        setMarkersData(result.card.stories)
+      })
+  }, [])
 
   return (
+    <div className="map-container">
     <Map center={[19.810, 0]} zoom={2}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       />
 
-      {/* {props.markersData.map(story => (
+      {markersData.map(story => (
         <Marker 
           key={story.id} 
           position={[story.lat, story.lng]} 
@@ -44,9 +54,9 @@ export default function CardMap(props) {
         >
           <div>
             <h1>KindCard #{activeStory.number}</h1>
-            <NavLink to="/cards">Cards</NavLink>
           </div>
-        </Popup>)} */}
+        </Popup>)}
     </Map>
+    </div>
   );
 }

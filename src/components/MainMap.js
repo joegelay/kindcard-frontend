@@ -1,6 +1,6 @@
 import React from "react";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Icon } from "leaflet";
 import customIcon from '../images/marker-icon-gold.png'
 import markerShadow from '../images/marker-shadow.png'
@@ -45,7 +45,10 @@ export default function MainMap(props) {
         >
           <div>
             <h1>KindCard #{activeStory.number}</h1>
-            <NavLink to={ '/cards/:id'.replace(":id", `${activeStory.number}`)}>Cards</NavLink>
+            <Link to={{
+              pathname: '/cards/:id'.replace(":id", `${activeStory.number}`)
+              }}
+            >Cards</Link>
           </div>
         </Popup>)}
     </Map>
