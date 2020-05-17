@@ -67,6 +67,11 @@
 
 body {
   font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
 }
 
 h1,
@@ -87,12 +92,12 @@ html {
 .App {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
 
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 #brand {
@@ -221,6 +226,8 @@ html {
   align-items: center;
   padding: 1rem 1rem 0rem 1rem;
   text-align: center;
+
+  margin-bottom: .5rem;
 }
 
 .leaflet-container {

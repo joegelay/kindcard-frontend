@@ -23,14 +23,12 @@ class App extends React.Component {
   render() {
     return (
       <HashRouter>  
-        <div className="App">
-
+      
           <Route exact path="/" render={props => 
             (<Homepage {...props} markersData={this.state.markersData}/>)
           }/>
           <Route path="/cards/:id" component={cardPage}/>
           
-        </div>
       </HashRouter>
     );
   }
