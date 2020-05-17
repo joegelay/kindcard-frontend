@@ -28,7 +28,7 @@ class App extends React.Component {
           <Route exact path="/" render={props => 
             (<Homepage {...props} markersData={this.state.markersData}/>)
           }/>
-          <Route path="/cards" component={cardPage}/>
+          <Route path="/cards/:id" component={cardPage}/>
           
         </div>
       </HashRouter>
