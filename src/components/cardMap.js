@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
 import { Icon } from "leaflet";
 import customIcon from '../images/marker-icon-gold.png'
 import markerShadow from '../images/marker-shadow.png'
-
-// const cardNumber = window.location.hash.replace("#/cards/", "")
 
 const goldIcon = new Icon({
   iconUrl: customIcon,
@@ -16,16 +14,7 @@ const goldIcon = new Icon({
 });
 
 export default function CardMap(props) {
-  // const [markersData, setMarkersData] = useState([]);
   const [activeStory, setActiveStory] = useState(null);
-
-  // useEffect(() => {
-  //   fetch(`http://localhost:4000/cards/${cardNumber}`)
-  //     .then(response => response.json())
-  //     .then(result => {
-  //       setMarkersData(result.card.stories)
-  //     })
-  // }, [])
 
   return (
     <div className="map-container">

@@ -4,29 +4,38 @@ import Header from './header'
 import Footer from './footer'
 import CardStories from './CardStories'
 
-const cardNumber = window.location.hash.replace("#/cards/", "")
+export default function CardPage({ match }) {
 
-export default function CardPage() {
-
-    const [markersData, setMarkersData] = useState([]);
+    const [cardData, setCardData] = useState([]);
+    const [loading, setLoading] = useState(true);
     
     useEffect(() => {
-    fetch(`http://localhost:4000/cards/${cardNumber}`)
-        .then(response => response.json())
-        .then(result => {
-            setMarkersData(result.card.stories)
-        })
-    }, [])
+        fetch(`http://localhost:4000/cards/${match.params.id}`)
+            .then(response => response.json())
+            .then(result => {
+                 setCardData(result.card.stories)
+            })
+            .then(setLoading(false))
 
-      return (
-          <div className="App">
-            <Header />
-            <h1 id="brand">KindCard #{cardNumber}</h1>
-            <CardMap markersData={markersData}/>
-            <CardStories storyData={markersData}/>
-            <Footer />
-          </div> 
-      );
+            return () => setLoading(true)
+    }, [match.params.id])
+
+    return (
+        <div className="App">
+            {loading && 
+                <p>It's loading</p>
+            }
+            {!loading && 
+                <>
+                    <Header />
+                    <h1 id="brand">KindCard #{match.params.id}</h1>
+                    <CardMap markersData={cardData}/>
+                    <CardStories storyData={cardData}/>
+                    <Footer />
+                </>
+            }
+        </div> 
+    );
   }
 
   
