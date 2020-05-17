@@ -3,7 +3,7 @@ import { Route, HashRouter } from "react-router-dom";
 import './styles/reset.css';
 import './styles/App.css';
 import Homepage from './components/homepage'
-import cardPage from './components/cardPage'
+import CardPage from './components/CardPage'
 
 class App extends React.Component {
   state = { 
@@ -27,7 +27,7 @@ class App extends React.Component {
           <Route exact path="/" render={props => 
             (<Homepage {...props} markersData={this.state.markersData}/>)
           }/>
-          <Route path="/cards/:id" component={cardPage}/>
+          <Route path="/cards/:id" component={CardPage}/>
           
       </HashRouter>
     );

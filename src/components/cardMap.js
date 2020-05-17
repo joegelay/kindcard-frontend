@@ -4,6 +4,8 @@ import { Icon } from "leaflet";
 import customIcon from '../images/marker-icon-gold.png'
 import markerShadow from '../images/marker-shadow.png'
 
+// const cardNumber = window.location.hash.replace("#/cards/", "")
+
 const goldIcon = new Icon({
   iconUrl: customIcon,
   shadowUrl: markerShadow,
@@ -13,18 +15,17 @@ const goldIcon = new Icon({
   shadowSize: [41, 41]
 });
 
-export default function CardMap() {
-  const [markersData, setMarkersData] = useState([]);
+export default function CardMap(props) {
+  // const [markersData, setMarkersData] = useState([]);
   const [activeStory, setActiveStory] = useState(null);
-  const cardNumber = window.location.hash.replace("#/cards/", "")
 
-  useEffect(() => {
-    fetch(`http://localhost:4000/cards/${cardNumber}`)
-      .then(response => response.json())
-      .then(result => {
-        setMarkersData(result.card.stories)
-      })
-  }, [])
+  // useEffect(() => {
+  //   fetch(`http://localhost:4000/cards/${cardNumber}`)
+  //     .then(response => response.json())
+  //     .then(result => {
+  //       setMarkersData(result.card.stories)
+  //     })
+  // }, [])
 
   return (
     <div className="map-container">
@@ -34,7 +35,7 @@ export default function CardMap() {
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       />
 
-      {markersData.map(story => (
+      {props.markersData.map(story => (
         <Marker 
           key={story.id} 
           position={[story.lat, story.lng]} 
