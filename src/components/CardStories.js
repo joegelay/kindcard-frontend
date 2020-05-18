@@ -17,7 +17,9 @@ export default function CardStories(props) {
             }
             {!loading && 
                 <>
-                    <h1>{props.storyData[0].story}</h1>
+                    {props.storyData.map(storyDetail => (
+                        <h1 key={storyDetail.id}>{storyDetail.story}</h1>
+                    ))}
                 </>
             }
         </div> 
