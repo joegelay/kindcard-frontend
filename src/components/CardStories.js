@@ -18,7 +18,14 @@ export default function CardStories(props) {
             {!loading && 
                 <>
                     {props.storyData.map(storyDetail => (
-                        <h1 key={storyDetail.id}>{storyDetail.story}</h1>
+                        <div key={storyDetail.id} className="card-story">
+                            <h2 className="card-story-number">#{storyDetail.number}</h2>
+                            <h2 className="card-story-date">{storyDetail.created_at.getFullYear()}</h2>
+                            <p className="card-story-content">{storyDetail.story}</p>
+
+
+
+                        </div>
                     ))}
                 </>
             }
