@@ -1,7 +1,8 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import MainMap from './MainMap'
-import Header from './header'
-import Footer from './footer'
+import Header from './Header'
+import Footer from './Footer'
 
 export default function Homepage(props) {
       return (
@@ -13,7 +14,9 @@ export default function Homepage(props) {
             </div>
             <MainMap markersData={props.markersData} />
             <div id="main-button-container">
-                <button className="main-button">Enter your card &rarr;</button> 
+                <Link to='/share-your-story' className="main-button">
+                    Enter your card &rarr;
+                </Link>
                 <button className="main-button">View random card &rarr;</button>
             </div>
             <Footer />

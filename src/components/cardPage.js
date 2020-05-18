@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CardMap from './CardMap'
 import SecondaryHeader from './SecondaryHeader'
-import Footer from './footer'
+import Footer from './Footer'
 import CardStories from './CardStories'
 
 export default function CardPage({ match }) {

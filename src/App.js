@@ -2,8 +2,9 @@ import React from 'react';
 import { Route, HashRouter } from "react-router-dom";
 import './styles/reset.css';
 import './styles/App.css';
-import Homepage from './components/homepage'
+import Homepage from './components/Homepage'
 import CardPage from './components/CardPage'
+import SubmitPage from './components/SubmitPage'
 
 class App extends React.Component {
   state = { 
@@ -28,6 +29,7 @@ class App extends React.Component {
             (<Homepage {...props} markersData={this.state.markersData}/>)
           }/>
           <Route path="/cards/:id" component={CardPage}/>
+          <Route path="/share-your-story/" component={SubmitPage}/>
           
       </HashRouter>
     );
