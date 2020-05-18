@@ -266,3 +266,45 @@ html {
 .card-story-content {
   text-align: left;
 }
+
+#formContainer {
+  background-color: var(--neutral-100);
+  width: 65rem;
+  box-shadow: 6px 6px 20px rgba(56, 56, 56, 0.2);
+  border-radius: 20px;
+  padding: 4rem 6rem;
+}
+
+#formHeader {
+  color: var(--blue-1000);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.fieldset {
+  border: none;
+}
+
+.styledSubmit {
+  background-color: var(--blue-500);
+  border: none;
+  border-radius: 0px;
+  color: var(--neutral-100);
+  padding: 1rem 3rem;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  transition: 0.15s all ease-in;
+}
+
+.styledSubmit:hover {
+  cursor: pointer;
+  background: var(--blue-1000);
+  outline: none;
+}
