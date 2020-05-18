@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import moment from 'moment'
+
 
 export default function CardStories(props) {
 
@@ -20,7 +22,7 @@ export default function CardStories(props) {
                     {props.storyData.map(storyDetail => (
                         <div key={storyDetail.id} className="card-story">
                             <h2 className="card-story-number">#{storyDetail.number}</h2>
-                            <h2 className="card-story-date">{storyDetail.created_at.getFullYear()}</h2>
+                            <h2 className="card-story-date">{moment(storyDetail.created_at).format("MM/DD/YYYY")}</h2>
                             <p className="card-story-content">{storyDetail.story}</p>
 
 
