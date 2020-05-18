@@ -277,7 +277,7 @@ html {
 
 #formHeader {
   color: var(--blue-1000);
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   margin-bottom: 2rem;
   text-transform: uppercase;
@@ -307,4 +307,14 @@ html {
   cursor: pointer;
   background: var(--blue-1000);
   outline: none;
+}
+
+label {
+  display: block;
+  color: var(--blue-500);
+  font-size: 1.5rem;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
