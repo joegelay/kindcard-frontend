@@ -268,16 +268,17 @@ html {
 }
 
 #formContainer {
+  margin-top: 2rem;
   background-color: var(--neutral-100);
-  width: 65rem;
+  width: 45rem;
   box-shadow: 6px 6px 20px rgba(56, 56, 56, 0.2);
   border-radius: 20px;
-  padding: 4rem 6rem;
+  padding: 2rem 4rem;
 }
 
 #formHeader {
-  color: var(--blue-1000);
-  font-size: 3rem;
+  color: var(--blue-800);
+  font-size: 2.5rem;
   text-align: center;
   margin-bottom: 2rem;
   text-transform: uppercase;
@@ -289,6 +290,8 @@ html {
 }
 
 .styledSubmit {
+  margin-top: 2rem;
+
   background-color: var(--blue-500);
   border: none;
   border-radius: 0px;
@@ -305,7 +308,7 @@ html {
 
 .styledSubmit:hover {
   cursor: pointer;
-  background: var(--blue-1000);
+  background: var(--blue-800);
   outline: none;
 }
 
@@ -317,4 +320,38 @@ label {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-align: left;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin: .5rem 0 1.5rem;
+  color: var(--neutral-500);
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border: 0;
+  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+}
+
+input:active {
+  outline: 3px solid var(--blue-500)
+}
+
+input:invalid {
+  box-shadow: none;
+  outline: 3px solid var(--red-500)
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  margin: .5rem 0 1rem;
+  color: var(--neutral-500);
+  font-size: 1rem;
+  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  padding: 1rem 2rem;
+  border: 0;
+  height: 16rem;
+  resize: none;
 }

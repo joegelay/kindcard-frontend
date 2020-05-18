@@ -12,7 +12,7 @@ export default function EntryForm() {
         <div id="formContainer">
             <h1 id="formHeader">SHARE YOUR STORY</h1>
             <form onSubmit={handleSubmit(onSubmit)} id="entryForm">
-                <label for="cardNumber">CARD NUMBER</label>
+                <label htmlFor="cardNumber">CARD NUMBER</label>
                 <input className="fieldset"
                     id="cardNumber"
                     type="number" 
@@ -20,7 +20,7 @@ export default function EntryForm() {
                     name="cardNumber" 
                     ref={register({ required: true, minLength: 3 })} 
                 />
-                <label for="email">EMAIL</label>
+                <label htmlFor="email">EMAIL</label>
                 <input className="fieldset"
                     id="email"
                     type="email" 
@@ -28,7 +28,7 @@ export default function EntryForm() {
                     name="email" 
                     ref={register({ required: true })} 
                 />
-                <label for="story">HOW DID YOU RECEIVE YOUR CARD?</label>
+                <label htmlFor="story">HOW DID YOU RECEIVE YOUR CARD?</label>
                 <textarea className="fieldset"
                     id="story"
                     placeholder="Share your story" 
