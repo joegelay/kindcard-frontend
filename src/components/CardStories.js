@@ -1,16 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function CardStories(props) {
 
-    const stories = props.storyData 
-    console.log(stories)
+    const [loading, setLoading] = useState(true);
 
-      return (
-          <div id="card-stories-container">
-            <a className="header-link" href="/about">ABOUT</a>
-            <a className="header-link" href="/log-in">LOG IN</a>
-          </div> 
-      );
-  }
+    useEffect(() => {
+        if (props.storyData.length !== 0) {
+            setLoading(false)
+        }
+    }, [props.storyData])
 
-  
+    return (
+        <div id="card-stories-container">
+            {loading && 
+                <p>Loading...</p>
+            }
+            {!loading && 
+                <>
+                    <h1>{props.storyData[0].story}</h1>
+                </>
+            }
+        </div> 
+    );
+}
