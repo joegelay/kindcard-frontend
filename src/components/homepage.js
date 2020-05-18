@@ -7,8 +7,10 @@ export default function Homepage(props) {
       return (
           <div className="App">
             <Header />
-            <h1 id="brand">KindCard</h1>
-            <h2 id="tagline">Every Act Mapped.</h2>
+            <div>
+                <h1 id="brand">KindCard</h1>
+                <h2 id="tagline">Every Act Mapped.</h2>
+            </div>
             <MainMap markersData={props.markersData} />
             <div id="main-button-container">
                 <button className="main-button">Enter your card &rarr;</button> 

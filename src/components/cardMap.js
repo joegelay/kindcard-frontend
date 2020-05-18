@@ -17,7 +17,7 @@ export default function CardMap(props) {
   const [activeStory, setActiveStory] = useState(null);
 
   return (
-    <div className="map-container">
+    <div className="map-container card-page-map">
     <Map center={[19.810, 0]} zoom={2}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

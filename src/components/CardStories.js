@@ -21,12 +21,11 @@ export default function CardStories(props) {
                 <>
                     {props.storyData.map(storyDetail => (
                         <div key={storyDetail.id} className="card-story">
-                            <h2 className="card-story-number">#{storyDetail.number}</h2>
-                            <h2 className="card-story-date">{moment(storyDetail.created_at).format("MM/DD/YYYY")}</h2>
+                            <header className="card-story-header">
+                                <h2 className="card-story-location">{storyDetail.location}</h2>
+                                <h2 className="card-story-date">{moment(storyDetail.created_at).format("MM/DD/YYYY")}</h2>
+                            </header>
                             <p className="card-story-content">{storyDetail.story}</p>
-
-
-
                         </div>
                     ))}
                 </>
