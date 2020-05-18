@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CardMap from './CardMap'
-import Header from './header'
+import SecondaryHeader from './SecondaryHeader'
 import Footer from './footer'
 import CardStories from './CardStories'
 
@@ -27,7 +27,7 @@ export default function CardPage({ match }) {
             }
             {!loading && 
                 <>
-                    <Header />
+                    <SecondaryHeader />
                     <h1 id="brand">KindCard #{match.params.id}</h1>
                     <CardMap markersData={cardData}/>
                     <CardStories storyData={cardData}/>
