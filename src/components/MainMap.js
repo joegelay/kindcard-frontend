@@ -45,10 +45,11 @@ export default function MainMap(props) {
         >
           <div>
             <h1>KindCard #{activeStory.number}</h1>
+            <br></br>
             <Link to={{
               pathname: '/cards/:id'.replace(":id", `${activeStory.number}`)
               }}
-            >Cards</Link>
+            >Read stories</Link>
           </div>
         </Popup>)}
     </Map>

@@ -43,7 +43,7 @@ export default function CardMap(props) {
           }}
         >
           <div>
-            <h1>KindCard #{activeStory.number}</h1>
+            <h1>{activeStory.location}</h1>
           </div>
         </Popup>)}
     </Map>
