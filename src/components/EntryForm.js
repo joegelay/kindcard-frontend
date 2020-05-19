@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import FormMap from './FormMap'
 
 export default function EntryForm() {
     const {register, handleSubmit, errors} = useForm()
@@ -36,6 +37,8 @@ export default function EntryForm() {
                     ref={register({ required: true, minLength: 5 })} 
                     form="entryForm"
                 ></textarea>
+                <label htmlFor="map">WHERE DID YOU RECEIVE YOUR CARD?</label>
+                <FormMap />
                 {errors.cardNumber && <p>Invalid card number</p>}
                 {errors.email && <p>Invalid email</p>}
                 {errors.story && <p>Invalid story</p>}

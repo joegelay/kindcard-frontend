@@ -131,6 +131,21 @@ html {
   margin-bottom: 2rem;
 }
 
+.form-map {
+  margin-top: 1rem;
+
+  border: 2px solid var(--blue-1000);
+  width: 100%;
+  height: 40vh;
+  /* min-height: 40vh; */
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  margin-bottom: 2rem;
+}
+
 .card-page-map {
   min-height: 50vh;
 }
