@@ -14,11 +14,9 @@ const goldIcon = new Icon({
   shadowSize: [41, 41]
 });
 
-
 export default class FormMap extends Component {
   
   customPopup = (SearchInfo) => {
-    
     this.props.setLocation({
         info: SearchInfo.info,
         latLng: SearchInfo.latLng
@@ -66,9 +64,11 @@ export default class FormMap extends Component {
           markerIcon={goldIcon}
           autoCollapse={false}
         />
-        {this.props.location.latLng ? <Marker position={[this.props.location.latLng.lat, this.props.location.latLng.lng ]}>
-            <Popup>A pretty CSS3 popup.<br />Easily customizable.</Popup>
-        </Marker> : null }
+        {this.props.location.latLng ? 
+            <Marker position={[this.props.location.latLng.lat, this.props.location.latLng.lng]} icon={goldIcon}>
+                <Popup>A pretty CSS3 popup.<br />Easily customizable.</Popup>
+            </Marker> 
+        : null }
       </Map>
       </div>
     );

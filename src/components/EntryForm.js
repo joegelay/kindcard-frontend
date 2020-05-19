@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import { useForm } from 'react-hook-form'
 import FormMap from './FormMap'
 
@@ -8,8 +8,6 @@ export default function EntryForm() {
     const [location, setLocation] = useState({});
 
     const onSubmit = (formData) => {
-
-
         console.log("form data", formData)
         console.log("location data", location)
     }
