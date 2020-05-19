@@ -370,3 +370,34 @@ textarea {
   height: 16rem;
   resize: none;
 }
+
+/* input.glass {
+  background-color: var(--neutral-200);
+  color: var(--blue-1000);
+  display: block;
+  width: 100%;
+  margin: .5rem 0 1.5rem;
+  color: var(--neutral-500);
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border: 0;
+  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+}
+
+.leaflet-top {
+  width: 100%;
+}
+
+.leaflet-control-geosearch {
+  background-color: var(--neutral-300);
+  width: 97%;
+}
+
+a.leaflet-bar-part.leaflet-bar-part-single {
+  display: hidden;
+}
+
+.results {
+  color: var(--blue-800);
+  overflow-y: scroll;
+} */
