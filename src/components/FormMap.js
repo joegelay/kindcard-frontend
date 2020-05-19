@@ -1,6 +1,18 @@
 import React, { Component } from "react";
 import { Map, TileLayer, Popup, withLeaflet } from "react-leaflet";
 import { ReactLeafletSearch } from "react-leaflet-search";
+import { Icon } from "leaflet";
+import customIcon from '../images/marker-icon-gold.png'
+import markerShadow from '../images/marker-shadow.png'
+
+const goldIcon = new Icon({
+  iconUrl: customIcon,
+  shadowUrl: markerShadow,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
 
 
 export default class FormMap extends Component {
@@ -46,6 +58,7 @@ export default class FormMap extends Component {
           popUp={this.customPopup}
           closeResultsOnClick={true}
           openSearchOnLoad={true}
+          markerIcon={goldIcon}
         />
       </Map>
       </div>
