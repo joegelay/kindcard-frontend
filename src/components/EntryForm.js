@@ -1,12 +1,17 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { useForm } from 'react-hook-form'
 import FormMap from './FormMap'
 
 export default function EntryForm() {
     const {register, handleSubmit, errors} = useForm()
 
-    const onSubmit = (data) => {
-        console.log(data)
+    const [location, setLocation] = useState({});
+
+    const onSubmit = (formData) => {
+
+
+        console.log("form data", formData)
+        console.log("location data", location)
     }
 
     return(
@@ -38,7 +43,7 @@ export default function EntryForm() {
                     form="entryForm"
                 ></textarea>
                 <label htmlFor="map">WHERE DID YOU RECEIVE YOUR CARD?</label>
-                <FormMap />
+                <FormMap location={location} setLocation={setLocation}/>
                 {errors.cardNumber && <p>Invalid card number</p>}
                 {errors.email && <p>Invalid email</p>}
                 {errors.story && <p>Invalid story</p>}

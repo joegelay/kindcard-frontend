@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Map, TileLayer, Popup, withLeaflet } from "react-leaflet";
+import { Map, TileLayer, Popup, withLeaflet, Marker } from "react-leaflet";
 import { ReactLeafletSearch } from "react-leaflet-search";
 import { Icon } from "leaflet";
 import customIcon from '../images/marker-icon-gold.png'
@@ -17,7 +17,13 @@ const goldIcon = new Icon({
 
 export default class FormMap extends Component {
   
-  customPopup(SearchInfo) {
+  customPopup = (SearchInfo) => {
+    
+    this.props.setLocation({
+        info: SearchInfo.info,
+        latLng: SearchInfo.latLng
+    })
+   
     return (
       <Popup>
         <div>
@@ -32,6 +38,8 @@ export default class FormMap extends Component {
               JSON.stringify(SearchInfo.raw.place_id)}
           </p> */}
         </div>
+        {/* {console.log(SearchInfo.info)}
+        {console.log(SearchInfo.latLng)} */}
       </Popup>
     );
   }
@@ -58,6 +66,9 @@ export default class FormMap extends Component {
           markerIcon={goldIcon}
           autoCollapse={false}
         />
+        {this.props.location.latLng ? <Marker position={[this.props.location.latLng.lat, this.props.location.latLng.lng ]}>
+            <Popup>A pretty CSS3 popup.<br />Easily customizable.</Popup>
+        </Marker> : null }
       </Map>
       </div>
     );

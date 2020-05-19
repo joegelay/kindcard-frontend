@@ -265,12 +265,12 @@ html {
   background-color: rgba(240, 244, 248, 0.15);
   box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.4);
 
-  width: 120vh;
+  width: 110vh;
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
   padding: .5rem 1rem 1rem 1rem;
-  line-height: 1.3rem;
+  line-height: 1.5rem;
 }
 
 .card-story-header {
@@ -282,6 +282,7 @@ html {
 
 .card-story-content {
   text-align: left;
+
 }
 
 #formContainer {
