@@ -66,7 +66,7 @@ export default class FormMap extends Component {
         />
         {this.props.location.latLng ? 
             <Marker position={[this.props.location.latLng.lat, this.props.location.latLng.lng]} icon={goldIcon}>
-                <Popup>A pretty CSS3 popup.<br />Easily customizable.</Popup>
+                <Popup>{this.props.location.info}</Popup>
             </Marker> 
         : null }
       </Map>
