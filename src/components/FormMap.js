@@ -41,17 +41,14 @@ export default class FormMap extends Component {
 
     return (
     <div className="form-map">
-      <Map
-        center={[19.810, 0]} zoom={1}
-      >
+      <Map center={[19.810, 0]} zoom={1}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
-        <ReactLeafletSearchComponent
+        <ReactLeafletSearchComponent className="custom-style"
           position="topleft"
           inputPlaceholder="Enter location"
-          search={[33.100745405144245, 46.48315429687501]}
           showMarker={true}
           zoom={5}
           showPopup={true}
@@ -59,6 +56,7 @@ export default class FormMap extends Component {
           closeResultsOnClick={true}
           openSearchOnLoad={true}
           markerIcon={goldIcon}
+          autoCollapse={false}
         />
       </Map>
       </div>

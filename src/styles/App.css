@@ -261,14 +261,16 @@ html {
 
 .card-story {
   border: 2px solid var(--yellow-500);
+  /* border-radius: 20px; */
   background-color: rgba(240, 244, 248, 0.15);
   box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.4);
 
-  width: 140vh;
+  width: 120vh;
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   padding: .5rem 1rem 1rem 1rem;
+  line-height: 1.3rem;
 }
 
 .card-story-header {
