@@ -9,16 +9,16 @@ export default class FormMap extends Component {
     return (
       <Popup>
         <div>
-          <p>
+          {/* <p>
             latitude and longitude from search component:{" "}
             {SearchInfo.latLng.toString().replace(",", " , ")}
-          </p>
-          <p>Info from search component: {SearchInfo.info}</p>
-          <p>
+          </p> */}
+          <p>{SearchInfo.info}</p>
+          {/* <p>
             {SearchInfo.raw &&
               SearchInfo.raw.place_id &&
               JSON.stringify(SearchInfo.raw.place_id)}
-          </p>
+          </p> */}
         </div>
       </Popup>
     );
@@ -45,7 +45,7 @@ export default class FormMap extends Component {
           showPopup={true}
           popUp={this.customPopup}
           closeResultsOnClick={true}
-          openSearchOnLoad={false}
+          openSearchOnLoad={true}
         />
       </Map>
       </div>
