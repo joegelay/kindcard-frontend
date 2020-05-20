@@ -25,19 +25,8 @@ export default class FormMap extends Component {
     return (
       <Popup>
         <div>
-          {/* <p>
-            latitude and longitude from search component:{" "}
-            {SearchInfo.latLng.toString().replace(",", " , ")}
-          </p> */}
           <p>{SearchInfo.info}</p>
-          {/* <p>
-            {SearchInfo.raw &&
-              SearchInfo.raw.place_id &&
-              JSON.stringify(SearchInfo.raw.place_id)}
-          </p> */}
         </div>
-        {/* {console.log(SearchInfo.info)}
-        {console.log(SearchInfo.latLng)} */}
       </Popup>
     );
   }

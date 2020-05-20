@@ -1,11 +1,12 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 export default function SecondaryHeader() {
       return (
           <div id="header">
-            <a className="header-link" href="/">HOME</a>
-            <a className="header-link" href="/about">ABOUT US</a>
-            <a className="header-link" href="/log-in">LOG IN</a>
+            <Link className="header-link" to="/">HOME</Link>
+            <Link className="header-link" to="/about">ABOUT US</Link>
+            <Link className="header-link" to="/log-in">LOG IN</Link>
           </div> 
       );
   }

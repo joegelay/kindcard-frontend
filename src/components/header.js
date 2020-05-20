@@ -1,10 +1,11 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 export default function Header() {
       return (
           <div id="header">
-            <a className="header-link" href="/about">ABOUT US</a>
-            <a className="header-link" href="/log-in">LOG IN</a>
+            <Link className="header-link" to="/about">ABOUT US</Link>
+            <Link className="header-link" to="/log-in">LOG IN</Link>
           </div> 
       );
   }
