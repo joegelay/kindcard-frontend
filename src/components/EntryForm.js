@@ -61,7 +61,6 @@ export default function EntryForm() {
                     placeholder={errors.cardNumber ? "Invalid card number" : "000"} 
                     name="cardNumber" 
                     ref={register({ required: true, minLength: 3 })} 
-                  
                 />
                 <label htmlFor="email">EMAIL</label>
                 <input className="fieldset"
@@ -70,7 +69,6 @@ export default function EntryForm() {
                     placeholder={errors.email ? "Invalid email" : "you@example.com"} 
                     name="email" 
                     ref={register({ required: true })} 
-                   
                 />
                 <label htmlFor="story">HOW DID YOU RECEIVE YOUR CARD?</label>
                 <textarea className="fieldset"
