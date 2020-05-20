@@ -8,6 +8,7 @@ export default function EntryForm() {
 
     const [location, setLocation] = useState({});
     const [successRedirect, setSuccessRedirect] = useState(false);
+    const [errorRedirect, setErrorRedirect] = useState(false);
 
     const onSubmit = (formData) => {
         if (location.info) {
@@ -34,14 +35,19 @@ export default function EntryForm() {
             })
             .catch((error) => {
                 console.error('Error:', error);
+                setErrorRedirect(true)
             });  
         } else {
-            alert("Please select a location!")
+            alert("Please select a location where you received your card!")
         }
     }
 
     if (successRedirect) {
-        return <Redirect to='/' />
+        return <Redirect to='/thank-you' />
+    }
+
+    if (errorRedirect) {
+        return <Redirect to='/error' />
     }
 
     return(
