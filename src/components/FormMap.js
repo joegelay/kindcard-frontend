@@ -66,7 +66,7 @@ export default class FormMap extends Component {
         />
         {this.props.location.latLng ? 
             <Marker position={[this.props.location.latLng.lat, this.props.location.latLng.lng]} icon={goldIcon}>
-                <Popup>{this.props.location.info}</Popup>
+                <Popup>{this.props.location.info.info}</Popup>
             </Marker> 
         : null }
       </Map>
