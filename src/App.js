@@ -5,6 +5,7 @@ import './styles/App.css';
 import Homepage from './components/Homepage'
 import CardPage from './components/CardPage'
 import SubmitPage from './components/SubmitPage'
+import AboutPage from './components/AboutPage'
 import ThankYouPage from './components/ThankYouPage'
 import ErrorPage from './components/ErrorPage'
 
@@ -26,7 +27,6 @@ class App extends React.Component {
   render() {
     return (
       <HashRouter>  
-      
           <Route exact path="/" render={props => 
             (<Homepage {...props} markersData={this.state.markersData}/>)
           }/>
@@ -34,6 +34,7 @@ class App extends React.Component {
           <Route path="/share-your-story/" component={SubmitPage}/>
           <Route path="/thank-you" component={ThankYouPage}/>
           <Route path="/error" component={ErrorPage}/>
+          <Route path="/about" component={AboutPage}/>
       </HashRouter>
     );
   }
