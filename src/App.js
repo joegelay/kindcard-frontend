@@ -6,6 +6,7 @@ import Homepage from './components/Homepage'
 import CardPage from './components/CardPage'
 import SubmitPage from './components/SubmitPage'
 import ThankYouPage from './components/ThankYouPage'
+import ErrorPage from './components/ErrorPage'
 
 class App extends React.Component {
   state = { 
@@ -32,6 +33,7 @@ class App extends React.Component {
           <Route path="/cards/:id" component={CardPage}/>
           <Route path="/share-your-story/" component={SubmitPage}/>
           <Route path="/thank-you" component={ThankYouPage}/>
+          <Route path="/error" component={ErrorPage}/>
       </HashRouter>
     );
   }
