@@ -17,7 +17,7 @@ const description = <p>
     true power of a single random act of kindness.
     <br></br><br></br>
     Email us at <a className="a-link" href="mailto:kindcardmap@gmail.com">kindcardmap@gmail.com</a> to 
-    order your own KindCards, or just to say hello!
+    request your own KindCards, or just to say hello!
     </p>
 
 const linkText = "Go back home"
