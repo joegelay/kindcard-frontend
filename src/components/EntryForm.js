@@ -1,11 +1,13 @@
 import React, {useState} from 'react'
 import { useForm } from 'react-hook-form'
+import {Redirect} from 'react-router-dom'
 import FormMap from './FormMap'
 
 export default function EntryForm() {
     const {register, handleSubmit, errors} = useForm()
 
     const [location, setLocation] = useState({});
+    const [successRedirect, setSuccessRedirect] = useState(false);
 
     const onSubmit = (formData) => {
         if (location.info) {
@@ -28,6 +30,7 @@ export default function EntryForm() {
             .then(response => response.json())
             .then(data => {
                 console.log('Success:', data);
+                setSuccessRedirect(true)
             })
             .catch((error) => {
                 console.error('Error:', error);
@@ -35,6 +38,10 @@ export default function EntryForm() {
         } else {
             alert("Please select a location!")
         }
+    }
+
+    if (successRedirect) {
+        return <Redirect to='/' />
     }
 
     return(
