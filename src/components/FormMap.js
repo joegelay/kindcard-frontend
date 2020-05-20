@@ -18,7 +18,7 @@ export default class FormMap extends Component {
   
   customPopup = (SearchInfo) => {
     this.props.setLocation({
-        info: SearchInfo.info,
+        info: SearchInfo,
         latLng: SearchInfo.latLng
     })
    

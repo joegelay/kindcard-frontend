@@ -8,8 +8,31 @@ export default function EntryForm() {
     const [location, setLocation] = useState({});
 
     const onSubmit = (formData) => {
-        console.log("form data", formData)
-        console.log("location data", location)
+        const data = {
+            number: formData.cardNumber,
+            email: formData.email,
+            location: location.info.info,
+            story: formData.story,
+            lat: location.latLng.lat,
+            lng: location.latLng.lng
+         }
+
+        console.log("data", data)
+
+        fetch('http://localhost:4000/stories', {
+            method: 'POST', 
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });  
     }
 
     return(
@@ -22,7 +45,8 @@ export default function EntryForm() {
                     type="number" 
                     placeholder="000" 
                     name="cardNumber" 
-                    ref={register({ required: true, minLength: 3 })} 
+                    // ref={register({ required: true, minLength: 3 })} 
+                    ref={register()} 
                 />
                 <label htmlFor="email">EMAIL</label>
                 <input className="fieldset"
@@ -30,14 +54,16 @@ export default function EntryForm() {
                     type="email" 
                     placeholder="you@example.com" 
                     name="email" 
-                    ref={register({ required: true })} 
+                    // ref={register({ required: true })} 
+                    ref={register()} 
                 />
                 <label htmlFor="story">HOW DID YOU RECEIVE YOUR CARD?</label>
                 <textarea className="fieldset"
                     id="story"
                     placeholder="Share your story" 
                     name="story" 
-                    ref={register({ required: true, minLength: 5 })} 
+                    // ref={register({ required: true, minLength: 5 })} 
+                    ref={register()} 
                     form="entryForm"
                 ></textarea>
                 <label htmlFor="map">WHERE DID YOU RECEIVE YOUR CARD?</label>
