@@ -137,7 +137,6 @@ html {
   border: 2px solid var(--blue-1000);
   width: 100%;
   height: 40vh;
-  /* min-height: 40vh; */
 
   display: flex;
   justify-content: center;
@@ -261,7 +260,6 @@ html {
 
 .card-story {
   border: 2px solid var(--yellow-500);
-  /* border-radius: 20px; */
   background-color: rgba(240, 244, 248, 0.15);
   box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.4);
 
@@ -282,7 +280,6 @@ html {
 
 .card-story-content {
   text-align: left;
-
 }
 
 #formContainer {
@@ -372,4 +369,9 @@ textarea {
   border: 0;
   height: 16rem;
   resize: none;
+}
+
+textarea:invalid {
+  box-shadow: none;
+  outline: 3px solid var(--red-500)
 }
