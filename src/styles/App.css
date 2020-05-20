@@ -115,7 +115,7 @@ html {
 .end-content {
   background-color: var(--neutral-100);
   width: 60%;
-  margin: 4rem;
+  margin: 4rem 0rem 1rem 0rem;
   max-width: 90rem;
   box-shadow: 6px 6px 20px rgba(56, 56, 56, 0.2);
   border-radius: 20px;
