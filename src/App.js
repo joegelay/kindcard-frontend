@@ -33,7 +33,7 @@ class App extends React.Component {
           }/>
           <Route path="/cards/:id" component={CardPage}/>
           <Route path="/share-your-story" component={SubmitPage}/>
-          <Route path="/login" component={SubmitPage}/>
+          <Route path="/login" component={LoginPage}/>
           <Route path="/thank-you" component={ThankYouPage}/>
           <Route path="/error" component={ErrorPage}/>
           <Route path="/about" component={AboutPage}/>

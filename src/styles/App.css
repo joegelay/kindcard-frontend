@@ -462,3 +462,14 @@ textarea:invalid {
 .a-link {
   color: var(--blue-500)
 }
+
+#login-form-container {
+  display: flex;
+}
+
+#login-form-message {
+  color: var(--teal-800);
+  font-size: 1.5rem;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
