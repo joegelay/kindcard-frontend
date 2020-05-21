@@ -2,10 +2,9 @@ import React, {useState} from 'react'
 import { useForm } from 'react-hook-form'
 import {Redirect} from 'react-router-dom'
 
-export default function LoginForm(props) {
+export default function CreateAccountForm() {
     const {register, handleSubmit, errors, reset} = useForm()
 
-    const [successRedirect, setSuccessRedirect] = useState(false);
     const [errorRedirect, setErrorRedirect] = useState(false);
     const [requestMessage, setrequestMessage] = useState(null);
 
@@ -35,17 +34,13 @@ export default function LoginForm(props) {
         reset()
     }
 
-    if (successRedirect) {
-        return <Redirect to='/thank-you' />
-    }
-
     if (errorRedirect) {
         return <Redirect to='/error' />
     }
 
     return(
         <div id="formContainer">
-            <h1 id="formHeader">{props.header}</h1>
+            <h1 id="formHeader">CREATE ACCOUNT</h1>
             <form onSubmit={handleSubmit(onSubmit)} id="entryForm">
             <label htmlFor="email">EMAIL</label>
                 <input className="fieldset"
@@ -59,7 +54,7 @@ export default function LoginForm(props) {
                 <input className="fieldset"
                     id="password"
                     type="password" 
-                    placeholder={errors.password ? "Invalid password" : props.password} 
+                    placeholder={errors.password ? "Invalid password" : "Password must be at least 8 characters"} 
                     name="password" 
                     ref={register({ required: true, minLength: 8 })} 
                 />
