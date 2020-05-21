@@ -26,9 +26,11 @@ export default function LoginForm() {
         .then(response => response.json())
         .then(data => {
             setRequestMessage(data.message)
-            setTimeout(() => {
-                return setSuccessRedirect(true)
-            }, 1000) 
+            if(data.token) {
+                setTimeout(() => {
+                    return setSuccessRedirect(true)
+                }, 1000) 
+            }
         })
         .catch((error) => {
             setErrorRedirect(true)
@@ -46,7 +48,7 @@ export default function LoginForm() {
     }
 
     return(
-        <div id="formContainer">
+        <div className="login-form">
             <h1 id="formHeader">LOG IN</h1>
             <form onSubmit={handleSubmit(onSubmit)} id="entryForm">
             <label htmlFor="email">EMAIL</label>

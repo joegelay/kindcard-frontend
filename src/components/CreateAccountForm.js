@@ -38,7 +38,7 @@ export default function CreateAccountForm() {
     }
 
     return(
-        <div id="formContainer">
+        <div className="login-form">
             <h1 id="formHeader">CREATE ACCOUNT</h1>
             <form onSubmit={handleSubmit(onSubmit)} id="entryForm">
             <label htmlFor="email">EMAIL</label>

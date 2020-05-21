@@ -6,10 +6,11 @@ import CreateAccountForm from './CreateAccountForm'
 
 export default function LoginPage() {
     return (
-        <div className="App">
+        <div id="login-page" className="App">
             <SecondaryHeader />
             <div id="login-form-container">
             <LoginForm />
+            <h1 id="or">OR</h1>
             <CreateAccountForm />
             </div>
             <Footer />  
