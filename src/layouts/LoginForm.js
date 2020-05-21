@@ -5,10 +5,9 @@ import {Redirect} from 'react-router-dom'
 export default function LoginForm(props) {
     const {register, handleSubmit, errors, reset} = useForm()
 
-    const [location, setLocation] = useState({});
     const [successRedirect, setSuccessRedirect] = useState(false);
     const [errorRedirect, setErrorRedirect] = useState(false);
-    const [successMessage, setSuccessMessage] = useState(null);
+    const [requestMessage, setrequestMessage] = useState(null);
 
 
     const onSubmit = (formData) => {
@@ -26,12 +25,10 @@ export default function LoginForm(props) {
         })
         .then(response => response.json())
         .then(data => {
-            console.log('Success:', data.message);
             // setSuccessRedirect(true)
-            setSuccessMessage(data.message)
+            setrequestMessage(data.message)
         })
         .catch((error) => {
-            console.error('Error:', error);
             setErrorRedirect(true)
         });  
 
@@ -66,7 +63,7 @@ export default function LoginForm(props) {
                     name="password" 
                     ref={register({ required: true, minLength: 8 })} 
                 />
-            <h2 id="login-form-message">{successMessage ? successMessage : ""}</h2>
+            <h2 id="login-form-message">{requestMessage ? requestMessage : ""}</h2>
             <input className="styledSubmit" type="submit" />
             </form>
         </div>
