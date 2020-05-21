@@ -6,7 +6,7 @@ export default function CreateAccountForm() {
     const {register, handleSubmit, errors, reset} = useForm()
 
     const [errorRedirect, setErrorRedirect] = useState(false);
-    const [requestMessage, setrequestMessage] = useState(null);
+    const [requestMessage, setRequestMessage] = useState(null);
 
 
     const onSubmit = (formData) => {
@@ -24,8 +24,7 @@ export default function CreateAccountForm() {
         })
         .then(response => response.json())
         .then(data => {
-            // setSuccessRedirect(true)
-            setrequestMessage(data.message)
+            setRequestMessage(data.message)
         })
         .catch((error) => {
             setErrorRedirect(true)

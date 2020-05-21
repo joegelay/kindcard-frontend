@@ -7,7 +7,7 @@ export default function LoginForm() {
 
     const [successRedirect, setSuccessRedirect] = useState(false);
     const [errorRedirect, setErrorRedirect] = useState(false);
-    const [requestMessage, setrequestMessage] = useState(null);
+    const [requestMessage, setRequestMessage] = useState(null);
 
 
     const onSubmit = (formData) => {
@@ -16,7 +16,7 @@ export default function LoginForm() {
             password: formData.password
         }
 
-        fetch('http://localhost:4000/users', {
+        fetch('http://localhost:4000/login', {
             method: 'POST', 
             headers: {
                 'Content-Type': 'application/json'
@@ -25,8 +25,10 @@ export default function LoginForm() {
         })
         .then(response => response.json())
         .then(data => {
-            // setSuccessRedirect(true)
-            setrequestMessage(data.message)
+            setRequestMessage(data.message)
+            setTimeout(() => {
+                return setSuccessRedirect(true)
+            }, 1000) 
         })
         .catch((error) => {
             setErrorRedirect(true)
@@ -36,7 +38,7 @@ export default function LoginForm() {
     }
 
     if (successRedirect) {
-        return <Redirect to='/thank-you' />
+        return <Redirect to='/' />
     }
 
     if (errorRedirect) {
