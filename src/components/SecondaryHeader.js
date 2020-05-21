@@ -6,7 +6,7 @@ export default function SecondaryHeader() {
           <div id="header">
             <Link className="header-link" to="/">HOME</Link>
             <Link className="header-link" to="/about">ABOUT US</Link>
-            <Link className="header-link" to="/log-in">LOG IN</Link>
+            <Link className="header-link" to="/login">LOG IN</Link>
           </div> 
       );
   }

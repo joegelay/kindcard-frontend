@@ -8,6 +8,7 @@ import SubmitPage from './components/SubmitPage'
 import AboutPage from './components/AboutPage'
 import ThankYouPage from './components/ThankYouPage'
 import ErrorPage from './components/ErrorPage'
+import LoginPage from './components/LoginPage'
 
 class App extends React.Component {
   state = { 
@@ -31,7 +32,8 @@ class App extends React.Component {
             (<Homepage {...props} markersData={this.state.markersData}/>)
           }/>
           <Route path="/cards/:id" component={CardPage}/>
-          <Route path="/share-your-story/" component={SubmitPage}/>
+          <Route path="/share-your-story" component={SubmitPage}/>
+          <Route path="/login" component={SubmitPage}/>
           <Route path="/thank-you" component={ThankYouPage}/>
           <Route path="/error" component={ErrorPage}/>
           <Route path="/about" component={AboutPage}/>
