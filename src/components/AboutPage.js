@@ -19,7 +19,7 @@ const description = <p>
     Email us at <a className="a-link" href="mailto:kindcardmap@gmail.com">kindcardmap@gmail.com</a> to 
     request your own KindCards, or just to say hello!
     <br></br><br></br>
-    You can also follow us on <a className="a-link" href="https://www.instagram.com/kindcard_ig/" target="_blank">Instagram</a> and <a className="a-link" href="https://www.youtube.com/watch?v=DKiHBh1TQ6E" target="_blank">YouTube</a>.
+    You can also follow us on <a className="a-link" href="https://www.instagram.com/kindcard_ig/" target="_blank" rel="noopener noreferrer" >Instagram</a> and <a className="a-link" href="https://www.youtube.com/watch?v=DKiHBh1TQ6E" target="_blank" rel="noopener noreferrer" >YouTube</a>.
     <br></br><br></br>
     To infinity and beyond!
     </p>

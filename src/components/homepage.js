@@ -5,6 +5,23 @@ import Header from './Header'
 import Footer from './Footer'
 
 export default function Homepage(props) {
+
+    // const [cardData, setCardData] = useState([]);
+    // const [loading, setLoading] = useState(true);
+    
+    useEffect(() => {
+        fetch(`http://localhost:4000/cards/`)
+            .then(response => response.json())
+            .then(result => {
+                 console.log(result)
+            })
+            // .then(setLoading(false))
+
+            // return () => setLoading(true)
+    })
+
+    const randomId = '009'
+
       return (
           <div className="App">
             <Header />
@@ -17,7 +34,9 @@ export default function Homepage(props) {
                 <Link to='/share-your-story' className="main-button">
                     Enter your card &rarr;
                 </Link>
-                <button className="main-button">View random card &rarr;</button>
+                <Link to={`/cards/${randomId}`} className="main-button">
+                    View random card &rarr;
+                </Link>
             </div>
             <Footer />
           </div> 
