@@ -1,54 +1,47 @@
-import React from 'react'
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from 'react'
+import { Redirect } from 'react-router-dom'
 import MainMap from './MainMap'
 import SecondaryHeader from './SecondaryHeader'
 import Footer from './Footer'
 
 export default function MyMapPage() {
 
-    // state = { 
-    //     markersData: []
-    //   };
+    const [cardData, setCardData] = useState([]);
+    const [loading, setLoading] = useState(false);
     
-    //   componentDidMount(){
-    //     fetch('http://localhost:4000/stories')
-    //       .then(response => response.json())
-    //       .then(stories => {
-    //         this.setState({
-    //           markersData: stories.stories
-    //         })
-    //       })
-    //   }
+    useEffect(() => {
+        fetch(`http://localhost:4000/cards/009`)
+            .then(response => response.json())
+            .then(result => {
+                if (!result.card) {
+                    return <Redirect to='/' />
+                }
+                setCardData(result.card.stories)
+            })
+            .then(setLoading(false))
 
-    const cardNumbers = []
-    let randomCardNumber = ''
-     
-    // props.markersData.forEach(marker => {
-    //     cardNumbers.push(marker.number)
-    // })
-
-    const randomNumber = cardNumbers[Math.floor(Math.random()*cardNumbers.length)]
-    randomCardNumber = randomNumber
+            return () => setLoading(true)
+    }, [])
 
     return (
         <div className="App">
-            <SecondaryHeader />
-            <div>
-                <h1 id="brand">KindCard</h1>
-                <h2 id="tagline">Every Act Mapped.</h2>
-            </div>
-            {/* <MainMap markersData={props.markersData} /> */}
-            <div id="main-button-container">
-                <Link to='/share-your-story' className="main-button">
-                    Enter your card &rarr;
-                </Link>
-                <Link to={`/cards/${randomCardNumber}`} className="main-button">
-                    View random card &rarr;
-                </Link>
-            </div>
-            <Footer />
+            {loading && 
+                <p>Loading...</p>
+            }
+            {!loading && 
+            <>
+                <SecondaryHeader />
+                <div>
+                    <h1 id="brand">My Map</h1>
+                </div>
+                <MainMap markersData={cardData}/>
+                <div id="main-button-container">
+                    <h2 id="tagline">The map above shows all locations of cards for which you have submitted a story.</h2>
+                </div>
+                <Footer />
+            </>
+            }
         </div> 
     );
-  }
-
+}
   
