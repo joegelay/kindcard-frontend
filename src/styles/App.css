@@ -495,3 +495,9 @@ textarea:invalid {
   font-size: 3rem;
   margin: 0rem 2rem;
 }
+
+#my-map-blurb {
+  color: var(--neutral-100);
+  font-size: 1.5rem;
+  line-height: 3rem;
+}

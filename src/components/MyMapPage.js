@@ -46,8 +46,8 @@ export default function MyMapPage() {
                 </div>
                 <MainMap markersData={cardData}/>
                 <div id="main-button-container">
-                    <h2 id="tagline">The map above shows the locations of all cards for which you have submitted a story. <br></br>
-                    Click the marker to visit that card's page!</h2>
+                    <h2 id="my-map-blurb">This map shows all story locations for cards that you have submitted a story for. <br></br>
+                    Click a marker to visit that card's page!</h2>
                 </div>
                 <Footer />
             </>

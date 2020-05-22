@@ -41,7 +41,7 @@ export default function LoginForm() {
     }
 
     if (successRedirect) {
-        return <Redirect to='/' />
+        return <Redirect to='/my-map' />
     }
 
     if (errorRedirect) {
