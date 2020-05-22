@@ -15,7 +15,7 @@ export default function CardStories(props) {
     return (
         <div id="card-stories-container">
             {loading && 
-                <p>Loading...</p>
+                <p>This card hasn't yet been printed, or no stories have been submitted for it!</p>
             }
             {!loading && 
                 <>

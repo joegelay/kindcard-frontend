@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import {Redirect} from 'react-router-dom'
 import CardMap from './CardMap'
 import SecondaryHeader from './SecondaryHeader'
 import Footer from './Footer'
@@ -13,7 +14,10 @@ export default function CardPage({ match }) {
         fetch(`http://localhost:4000/cards/${match.params.id}`)
             .then(response => response.json())
             .then(result => {
-                 setCardData(result.card.stories)
+                if (!result.card) {
+                    return <Redirect to='/' />
+                }
+                setCardData(result.card.stories)
             })
             .then(setLoading(false))
 
@@ -23,7 +27,7 @@ export default function CardPage({ match }) {
     return (
         <div className="App">
             {loading && 
-                <p>It's loading</p>
+                <p>Loading...</p>
             }
             {!loading && 
                 <>
