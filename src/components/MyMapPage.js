@@ -8,15 +8,17 @@ export default function MyMapPage() {
 
     const [cardData, setCardData] = useState([]);
     const [loading, setLoading] = useState(false);
+
+    const userEmail = "danlove2020@yahoo.com"
     
     useEffect(() => {
-        fetch(`http://localhost:4000/cards/009`)
+        fetch(`http://localhost:4000/stories/${userEmail}`)
             .then(response => response.json())
             .then(result => {
-                if (!result.card) {
+                if (!result.stories) {
                     return <Redirect to='/' />
                 }
-                setCardData(result.card.stories)
+                setCardData(result.stories)
             })
             .then(setLoading(false))
 
