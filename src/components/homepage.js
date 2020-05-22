@@ -7,7 +7,6 @@ import Footer from './Footer'
 export default function Homepage() {
 
     const [markersData, setMarkersData] = useState([]);
-    const [loading, setLoading] = useState(false);
     
     useEffect(() => {
         fetch(`http://localhost:4000/stories/`)
@@ -15,9 +14,6 @@ export default function Homepage() {
             .then(stories => {
                 setMarkersData(stories.stories)
             })
-            .then(setLoading(false))
-
-        return () => setLoading(true)
     }, [])
         
     const cardNumbers = []
