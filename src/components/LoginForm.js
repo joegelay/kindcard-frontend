@@ -27,6 +27,7 @@ export default function LoginForm() {
         .then(data => {
             setRequestMessage(data.message)
             if(data.token) {
+                localStorage.setItem("token", data.token)
                 setTimeout(() => {
                     return setSuccessRedirect(true)
                 }, 1000) 
