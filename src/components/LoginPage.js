@@ -5,7 +5,7 @@ import LoginForm from './LoginForm'
 import CreateAccountForm from './CreateAccountForm'
 
 const signUpBlurb = `
-    Create an account to easily keep track of all your KindCards as they travel onward!
+    Create an account to easily keep track of all your KindCards as they are passed along!
 `
 
 export default function LoginPage() {
