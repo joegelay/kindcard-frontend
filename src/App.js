@@ -12,26 +12,11 @@ import ErrorPage from './components/ErrorPage'
 import LoginPage from './components/LoginPage'
 
 class App extends React.Component {
-  state = { 
-    markersData: []
-  };
-
-  componentDidMount(){
-    fetch('http://localhost:4000/stories')
-      .then(response => response.json())
-      .then(stories => {
-        this.setState({
-          markersData: stories.stories
-        })
-      })
-  }
-
+ 
   render() {
     return (
       <HashRouter>  
-          <Route exact path="/" render={props => 
-            (<Homepage {...props} markersData={this.state.markersData}/>)
-          }/>
+          <Route exact path="/" component={Homepage}/>
           <Route path="/cards/:id" component={CardPage}/>
           <Route path="/share-your-story" component={SubmitPage}/>
           <Route path="/login" component={LoginPage}/>

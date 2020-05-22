@@ -1,15 +1,29 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Link } from "react-router-dom";
 import MainMap from './MainMap'
 import Header from './Header'
 import Footer from './Footer'
 
-export default function Homepage(props) {
+export default function Homepage() {
 
+    const [markersData, setMarkersData] = useState([]);
+    const [loading, setLoading] = useState(false);
+    
+    useEffect(() => {
+        fetch(`http://localhost:4000/stories/`)
+            .then(response => response.json())
+            .then(stories => {
+                setMarkersData(stories.stories)
+            })
+            .then(setLoading(false))
+
+        return () => setLoading(true)
+    }, [])
+        
     const cardNumbers = []
     let randomCardNumber = ''
      
-    props.markersData.forEach(marker => {
+    markersData.forEach(marker => {
         cardNumbers.push(marker.number)
     })
 
@@ -23,7 +37,7 @@ export default function Homepage(props) {
                 <h1 id="brand">KindCard</h1>
                 <h2 id="tagline">Every Act Mapped.</h2>
             </div>
-            <MainMap markersData={props.markersData} />
+            <MainMap markersData={markersData} />
             <div id="main-button-container">
                 <Link to='/share-your-story' className="main-button">
                     Enter your card &rarr;
@@ -35,6 +49,4 @@ export default function Homepage(props) {
             <Footer />
         </div> 
     );
-  }
-
-  
+}
