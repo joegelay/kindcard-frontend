@@ -3,15 +3,17 @@ import { Redirect } from 'react-router-dom'
 import MainMap from './MainMap'
 import SecondaryHeader from './SecondaryHeader'
 import Footer from './Footer'
+import jwt from 'jsonwebtoken'
 
 export default function MyMapPage() {
 
     const [cardData, setCardData] = useState([]);
     const [loading, setLoading] = useState(false);
-
-    const userEmail = "danlove2020@yahoo.com"
     
     useEffect(() => {
+        const decodedJwt = jwt.decode(localStorage.getItem("token"))
+        const userEmail = decodedJwt.email
+        
         fetch(`http://localhost:4000/stories/${userEmail}`)
             .then(response => response.json())
             .then(result => {
