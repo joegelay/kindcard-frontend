@@ -7,6 +7,7 @@ import CardPage from './components/CardPage'
 import SubmitPage from './components/SubmitPage'
 import AboutPage from './components/AboutPage'
 import ThankYouPage from './components/ThankYouPage'
+import MyMapPage from './components/MyMapPage'
 import ErrorPage from './components/ErrorPage'
 import LoginPage from './components/LoginPage'
 
@@ -35,6 +36,7 @@ class App extends React.Component {
           <Route path="/share-your-story" component={SubmitPage}/>
           <Route path="/login" component={LoginPage}/>
           <Route path="/thank-you" component={ThankYouPage}/>
+          <Route path="/my-map" component={MyMapPage}/>
           <Route path="/error" component={ErrorPage}/>
           <Route path="/about" component={AboutPage}/>
       </HashRouter>
