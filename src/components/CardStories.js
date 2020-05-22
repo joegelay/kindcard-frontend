@@ -19,7 +19,7 @@ export default function CardStories(props) {
             }
             {!loading && 
                 <>
-                    {props.storyData.reverse().map(storyDetail => (
+                    {props.storyData.map(storyDetail => (
                         <div key={storyDetail.id} className="card-story">
                             <header className="card-story-header">
                                 <h2 className="card-story-location">{storyDetail.location}</h2>

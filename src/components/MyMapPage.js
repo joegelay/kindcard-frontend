@@ -17,10 +17,16 @@ export default function MyMapPage() {
         fetch(`http://localhost:4000/stories/${userEmail}`)
             .then(response => response.json())
             .then(result => {
-                if (!result.stories) {
+                if (!result.userCards) {
                     return <Redirect to='/' />
                 }
-                setCardData(result.stories)
+
+                const allStories = []
+
+                result.userCards.forEach(card => {
+                    allStories.push(card.stories)
+                })
+                setCardData(allStories.flat())
             })
             .then(setLoading(false))
 
