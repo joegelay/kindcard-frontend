@@ -19,7 +19,7 @@ export default function EntryForm() {
                 story: formData.story,
                 lat: location.latLng.lat,
                 lng: location.latLng.lng
-             }
+            }
     
             fetch('http://localhost:4000/stories', {
                 method: 'POST', 
@@ -30,11 +30,9 @@ export default function EntryForm() {
             })
             .then(response => response.json())
             .then(data => {
-                console.log('Success:', data);
                 setSuccessRedirect(true)
             })
             .catch((error) => {
-                console.error('Error:', error);
                 setErrorRedirect(true)
             });  
         } else {
