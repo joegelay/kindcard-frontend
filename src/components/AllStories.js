@@ -24,6 +24,11 @@ export default function AllStories() {
         return () => setLoading(true)
     }, [])
 
+    const deleteStory = (storyId) => {
+        let newStoryData = storyData.filter(story => story.id !== storyId)
+        setStoryData(newStoryData)
+    }
+
     return (
         <div id="card-stories-container">
             {loading && 
@@ -38,6 +43,9 @@ export default function AllStories() {
                                 <h2 className="card-story-date">{moment(storyDetail.created_at).format("MM/DD/YYYY")}</h2>
                             </header>
                             <p className="card-story-content">{storyDetail.story}</p>
+                            <button onClick={(event) => {
+                                deleteStory(storyDetail.id)
+                            }}>REMOVE STORY</button>
                         </div>
                     ))}
                 </>
@@ -45,3 +53,17 @@ export default function AllStories() {
         </div> 
     );
 }
+
+
+
+
+
+
+    
+
+    // fetch(`http://localhost:6001/bots/${bot.id}`, {
+    //   method: 'delete'
+    // })
+
+ 
+
