@@ -3,11 +3,13 @@ import { Redirect } from 'react-router-dom'
 
 import SecondaryHeader from './SecondaryHeader'
 import Footer from './Footer'
+import AllStories from './AllStories';
 
 
 export default function MyMapPage() {
 
     const [errorRedirect, setErrorRedirect] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         const jwt = localStorage.getItem("token")
@@ -20,12 +22,11 @@ export default function MyMapPage() {
                 }
             })
             .then(response => response.json())
-            .then(result => {
-                console.log(result)
-            })
             .catch((error) => {
                 setErrorRedirect(true)
             });  
+
+            return () => setLoading(true)
     }, [])
 
     if (errorRedirect) {
@@ -34,11 +35,18 @@ export default function MyMapPage() {
 
     return (
         <div className="App">
-            <SecondaryHeader />
-         
-            <h1 id="brand">Admin</h1>
-
-            <Footer />     
+            {loading && 
+                <p>Loading...</p>
+            }
+            {!loading &&
+            <>
+                <SecondaryHeader />
+            
+                <h1 id="brand">Admin</h1>
+                <AllStories />
+                <Footer />     
+            </>
+            }
         </div> 
     );
 }
