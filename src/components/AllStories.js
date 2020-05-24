@@ -27,6 +27,15 @@ export default function AllStories() {
     const deleteStory = (storyId) => {
         let newStoryData = storyData.filter(story => story.id !== storyId)
         setStoryData(newStoryData)
+
+        const jwt = localStorage.getItem("token")
+        
+        fetch(`http://localhost:4000/story/${storyId}`, {
+            method: 'DELETE', 
+            headers: {
+                    'Authorization': jwt
+                }
+        })
     }
 
     return (
@@ -53,17 +62,3 @@ export default function AllStories() {
         </div> 
     );
 }
-
-
-
-
-
-
-    
-
-    // fetch(`http://localhost:6001/bots/${bot.id}`, {
-    //   method: 'delete'
-    // })
-
- 
-
