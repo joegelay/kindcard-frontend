@@ -10,6 +10,7 @@ import ThankYouPage from './components/ThankYouPage'
 import MyMapPage from './components/MyMapPage'
 import ErrorPage from './components/ErrorPage'
 import LoginPage from './components/LoginPage'
+import AdminPage from './components/AdminPage'
 
 class App extends React.Component {
  
@@ -24,6 +25,7 @@ class App extends React.Component {
           <Route path="/my-map" component={MyMapPage}/>
           <Route path="/error" component={ErrorPage}/>
           <Route path="/about" component={AboutPage}/>
+          <Route path="/admin" component={AdminPage}/>
       </HashRouter>
     );
   }
