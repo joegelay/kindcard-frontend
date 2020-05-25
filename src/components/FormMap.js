@@ -40,7 +40,7 @@ export default function FormMap(props) {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
-        <ReactLeafletSearchComponent className="custom-style"
+        <ReactLeafletSearchComponent className="custom-style" id="search-input"
           position="topleft"
           inputPlaceholder="Enter location"
           showMarker={true}
