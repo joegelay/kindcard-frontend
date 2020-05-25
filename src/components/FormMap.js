@@ -30,7 +30,7 @@ export default function FormMap(props) {
       </Popup>
     );
   }
-  
+
   const ReactLeafletSearchComponent = withLeaflet(ReactLeafletSearch);
 
   return (

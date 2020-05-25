@@ -14,12 +14,26 @@ const goldIcon = new Icon({
   shadowSize: [41, 41]
 });
 
+let centerLat = 19.810
+let centerLng = 0
+
+const mq = window.matchMedia( "(min-width: 500px)" );
+
+  if (mq.matches) {
+    centerLat = 19.810
+    centerLng = 0
+  } else {
+    console.log("less than 500px")
+    centerLat = 30.810
+    centerLng = -90
+  }
+
 export default function MainMap(props) {
   const [activeStory, setActiveStory] = React.useState(null);
 
   return (
     <div className="map-container">
-    <Map center={[19.810, 0]} zoom={2}>
+    <Map center={[centerLat, centerLng]} zoom={2}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
