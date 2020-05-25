@@ -306,6 +306,23 @@ html {
   color: var(--neutral-100);
 }
 
+.header-link-two {
+  font-size: 1.3rem;
+  margin: .75rem 2rem 0rem 0rem;
+  transition: all 0.2s ease-in-out 0s;
+  text-decoration: none;
+  color: var(--neutral-100);
+}
+
+.header-link-two:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.header-link-two:visited {
+  color: var(--neutral-100);
+}
+
 .leaflet-popup-content {
   color: var(--blue-1000)
 }
@@ -684,5 +701,33 @@ textarea:invalid {
   #or {
     font-size: 2rem;
     margin: 1rem 2rem;
+  }
+
+  #my-map-blurb {
+    margin: 0rem 1rem;
+    color: var(--neutral-100);
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  #header {
+    justify-content: flex-end;
+    width: 95%;
+  }
+
+  .header-link {
+    font-size: 1rem;
+    margin: .75rem 1rem 0rem 1rem;
+    transition: all 0.2s ease-in-out 0s;
+    text-decoration: none;
+    color: var(--neutral-100);
+  }
+
+  .header-link-two {
+    font-size: 1rem;
+    margin: .75rem .75rem 0rem .75rem;
+    transition: all 0.2s ease-in-out 0s;
+    text-decoration: none;
+    color: var(--neutral-100);
   }
 }

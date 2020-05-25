@@ -45,10 +45,8 @@ export default function MyMapPage() {
                     <h1 id="brand">My Map</h1>
                 </div>
                 <MainMap markersData={cardData}/>
-                <div id="main-button-container">
-                    <h2 id="my-map-blurb">This map shows all story locations for cards that you have submitted a story for. <br></br>
-                    Click a marker to visit that card's page!</h2>
-                </div>
+                <h2 id="my-map-blurb">This map shows all story locations for cards that you have submitted a story for. <br></br>
+                Click a marker to visit that card's page!</h2>
                 <Footer />
             </>
             }
