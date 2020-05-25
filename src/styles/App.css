@@ -201,8 +201,8 @@ html {
   margin-top: 1rem;
 
   border: 2px solid var(--blue-1000);
-  width: 140vh;
-  height: 55vh;
+  width: 70%;
+  height: 55%;
 
   display: flex;
   justify-content: center;
@@ -240,6 +240,7 @@ html {
   text-decoration: none;
   text-align: center;
   width: 20%;
+  min-width: 200px;
   margin: 0rem 2rem;
 
   border: 2px solid var(--neutral-100);
@@ -519,4 +520,49 @@ textarea:invalid {
   color: var(--neutral-100);
   border-radius: 20px;
   padding: .25rem;
+}
+
+@media screen and (max-width: 795px) {
+  #brand {
+    margin-top: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+
+    color: var(--neutral-100);
+    font-size: 4.5rem;
+  }
+
+  #main-button-container {
+    display: flex;
+    justify-content: center;
+
+    width: 80px;
+  }
+
+  .main-button {
+    text-decoration: none;
+    text-align: center;
+    width: 80px;
+    min-width: 130px;
+    margin: 0rem .5rem;
+
+    border: 2px solid var(--neutral-100);
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    background-color: transparent;
+    color: var(--neutral-100);
+    border-radius: 10px;
+    overflow: hidden;
+
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    transition-property: color;
+    transition-duration: 0.3s;
+  }
+
+  .map-container {
+    width: 85%;
+    height: 50%;
+  }
 }
