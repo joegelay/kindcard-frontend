@@ -32,12 +32,12 @@ export default function CardPage({ match }) {
             {!loading && 
                 <>
                     <SecondaryHeader />
-                    <h1 id="brand">KindCard #{match.params.id}</h1>
+                    <h1 id="card-page-header">KindCard #{match.params.id}</h1>
                     <CardMap markersData={cardData}/>
                     <CardStories storyData={cardData}/>
-                    <Footer />
                 </>
             }
+            <Footer />
         </div> 
     );
   }

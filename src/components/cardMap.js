@@ -13,12 +13,22 @@ const goldIcon = new Icon({
   shadowSize: [41, 41]
 });
 
+let zoomScale = 2
+
+const mq = window.matchMedia( "(min-width: 500px)" );
+
+  if (mq.matches) {
+    zoomScale = 2
+  } else {
+    zoomScale = 1
+  }
+
 export default function CardMap(props) {
   const [activeStory, setActiveStory] = useState(null);
 
   return (
     <div className="map-container card-page-map">
-    <Map center={[19.810, 0]} zoom={2}>
+    <Map center={[19.810, 0]} zoom={zoomScale}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
