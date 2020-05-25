@@ -551,7 +551,6 @@ textarea:invalid {
     margin-right: 1rem;
     margin-left: 1rem;
 
-    color: var(--neutral-100);
     font-size: 4.5rem;
   }
 
@@ -569,19 +568,8 @@ textarea:invalid {
     min-width: 130px;
     margin: 0rem .5rem;
 
-    border: 2px solid var(--neutral-100);
     padding: 1rem 1rem;
     font-size: 1rem;
-    background-color: transparent;
-    color: var(--neutral-100);
-    border-radius: 10px;
-    overflow: hidden;
-
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    position: relative;
-    transition-property: color;
-    transition-duration: 0.3s;
   }
 
   .map-container {
