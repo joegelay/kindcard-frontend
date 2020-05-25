@@ -52,7 +52,7 @@ export default function AllStories() {
                                 <h2 className="card-story-date">{moment(storyDetail.created_at).format("MM/DD/YYYY")}</h2>
                             </header>
                             <p className="card-story-content">{storyDetail.story}</p>
-                            <button onClick={(event) => {
+                            <button className="admin-delete" onClick={(event) => {
                                 deleteStory(storyDetail.id)
                             }}>REMOVE STORY</button>
                         </div>

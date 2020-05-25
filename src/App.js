@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, HashRouter } from "react-router-dom";
 import './styles/reset.css';
 import './styles/App.css';
+
 import Homepage from './components/Homepage'
 import CardPage from './components/CardPage'
 import SubmitPage from './components/SubmitPage'

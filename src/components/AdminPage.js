@@ -41,8 +41,7 @@ export default function MyMapPage() {
             {!loading &&
             <>
                 <SecondaryHeader />
-            
-                <h1 id="brand">Admin</h1>
+                <h1 id="admin-header">Admin</h1>
                 <AllStories />
                 <Footer />     
             </>

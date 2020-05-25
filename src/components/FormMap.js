@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Map, TileLayer, Popup, withLeaflet, Marker } from "react-leaflet";
 import { ReactLeafletSearch } from "react-leaflet-search";
 import { Icon } from "leaflet";
@@ -14,10 +14,10 @@ const goldIcon = new Icon({
   shadowSize: [41, 41]
 });
 
-export default class FormMap extends Component {
+export default function FormMap(props) {
   
-  customPopup = (SearchInfo) => {
-    this.props.setLocation({
+  const customPopup = (SearchInfo) => {
+    props.setLocation({
         info: SearchInfo,
         latLng: SearchInfo.latLng
     })
@@ -30,11 +30,10 @@ export default class FormMap extends Component {
       </Popup>
     );
   }
+  
+  const ReactLeafletSearchComponent = withLeaflet(ReactLeafletSearch);
 
-  render() {
-    const ReactLeafletSearchComponent = withLeaflet(ReactLeafletSearch);
-
-    return (
+  return (
     <div className="form-map">
       <Map center={[19.810, 0]} zoom={1}>
         <TileLayer
@@ -47,19 +46,19 @@ export default class FormMap extends Component {
           showMarker={true}
           zoom={5}
           showPopup={true}
-          popUp={this.customPopup}
+          popUp={customPopup}
           closeResultsOnClick={true}
           openSearchOnLoad={true}
           markerIcon={goldIcon}
           autoCollapse={false}
         />
-        {this.props.location.latLng ? 
-            <Marker position={[this.props.location.latLng.lat, this.props.location.latLng.lng]} icon={goldIcon}>
-                <Popup>{this.props.location.info.info}</Popup>
+        {props.location.latLng ? 
+            <Marker position={[props.location.latLng.lat, props.location.latLng.lng]} icon={goldIcon}>
+                <Popup>{props.location.info.info}</Popup>
             </Marker> 
         : null }
       </Map>
       </div>
-    );
-  }
+  );
 }
+
