@@ -367,7 +367,8 @@ html {
 .formContainer {
   margin-top: 2rem;
   background-color: var(--neutral-100);
-  width: 45rem;
+  width: 50%;
+  min-width: 505px;
   box-shadow: 6px 6px 20px rgba(56, 56, 56, 0.2);
   border-radius: 20px;
   padding: 2rem 4rem;

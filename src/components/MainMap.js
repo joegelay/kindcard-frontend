@@ -23,7 +23,6 @@ const mq = window.matchMedia( "(min-width: 500px)" );
     centerLat = 19.810
     centerLng = 0
   } else {
-    console.log("less than 500px")
     centerLat = 30.810
     centerLng = -90
   }
