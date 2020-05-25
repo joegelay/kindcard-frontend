@@ -50,7 +50,7 @@ export default function EntryForm() {
 
     return(
         <div className="formContainer">
-            <h1 id="formHeader">SHARE YOUR STORY</h1>
+            <h1 className="formHeader">SHARE YOUR STORY</h1>
             <form onSubmit={handleSubmit(onSubmit)} id="entryForm">
                 <label htmlFor="cardNumber">CARD NUMBER</label>
                 <input className="fieldset"

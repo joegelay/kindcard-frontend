@@ -377,7 +377,7 @@ html {
   padding: 2rem 4rem;
 }
 
-#formHeader {
+.formHeader {
   color: var(--blue-800);
   font-size: 2.5rem;
   text-align: center;
@@ -653,5 +653,36 @@ textarea:invalid {
 
   #end-button {
     width: 100%;
+  }
+
+  #login-form-container {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #sign-up-blurb {
+    margin: 2rem 1rem 1rem 1rem;
+    font-size: 1.5rem;
+  }
+
+  .login-form {
+    margin-top: .5rem;
+    width: 85%;
+    box-shadow: 6px 6px 20px rgba(56, 56, 56, 0.2);
+    padding: 2rem 2rem;
+  }
+
+  #login-form-message {
+    color: var(--teal-800);
+    font-size: 1.5rem;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+  }
+
+  #or {
+    font-size: 2rem;
+    margin: 1rem 2rem;
   }
 }

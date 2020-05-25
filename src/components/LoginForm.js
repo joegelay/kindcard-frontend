@@ -50,7 +50,7 @@ export default function LoginForm() {
 
     return(
         <div className="login-form">
-            <h1 id="formHeader">LOG IN</h1>
+            <h1 className="formHeader">LOG IN</h1>
             <form onSubmit={handleSubmit(onSubmit)} id="entryForm">
             <label htmlFor="email">EMAIL</label>
                 <input className="fieldset"

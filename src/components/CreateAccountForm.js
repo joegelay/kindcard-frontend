@@ -39,7 +39,7 @@ export default function CreateAccountForm() {
 
     return(
         <div className="login-form">
-            <h1 id="formHeader">CREATE ACCOUNT</h1>
+            <h1 className="formHeader">CREATE ACCOUNT</h1>
             <form onSubmit={handleSubmit(onSubmit)} id="entryForm">
             <label htmlFor="email">EMAIL</label>
                 <input className="fieldset"
