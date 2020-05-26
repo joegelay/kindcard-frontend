@@ -10,7 +10,7 @@ export default function EndPage({ title, description, linkTo, linkText }) {
             <SecondaryHeader />
             <div className="end-content">
                 <h1 className="end-title">{title}</h1>
-                <p id="end-description">{description}</p>
+                <div id="end-description">{description}</div>
                 <Link id="end-button" to={linkTo}>{linkText}</Link>
             </div>
             <Footer />
