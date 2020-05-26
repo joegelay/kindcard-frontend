@@ -1,68 +1,38 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# KindCard
 
-## Available Scripts
+I started the KindCard project to answer the question - "How much impact can a single act of kindness have?" I've always loved doing kind things for strangers, and I believe that one kind action can have a sort of "ripple effect" that promotes many more. I'm always curious about how to quantifity the abstract, and thus KindCard was born! 
 
-In the project directory, you can run:
+As of May 2020, hundreds of cards are in circulation in at least 7 different countries. The original version of the website was a simple landing page and form so that people could submit stories when they received a card. With the added visualization and interactivity of the new site, I hope that cards will be logged even more. 
+<br />
+<br />
+The site is built with React.js, Leaflet.js, Node, Express.js, CSS, and PostgreSQL.
+<br />
+<br />
+[Backend repo here](https://github.com/joegelay/kindcard-backend)
 
-### `yarn start`
+### Features 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Map on homepage shows all user-submitted stories from KindCard recepients. 
+- Individual card pages to show locations of stories tied to a specific KindCard, plus story entries.
+- Card submission form using Leaflet search plugin for standardizing location data and providing international support.
+- Log in / Create acccount page using full auth through Bcrypt and JWT. 
+- "My Map" page for logged in users to track locations of all their KindCards.
+- Admin page for site upkeep. Admin page uses full auth of admin login. 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Guest Login
 
-### `yarn test`
+There is no need to create and account or log in to explore most features of the site. Logging in allows users who submitted a card entry to gain access to a personalized map that shows the locations of all cards they have submitted a story for. 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Video Demo
 
-### `yarn build`
+Coming soon!
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!-- [![KindCard Walk-through Video](https://img.youtube.com/vi/Hp6zfkOzCyA/0.jpg)](https://www.youtube.com/watch?v=Hp6zfkOzCyA) -->
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Author
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* **Joe Gelay** - [Joe Gelay's Github](https://github.com/joegelay)
 
-### `yarn eject`
+### License
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project is open to the public. No license is required for use.
