@@ -13,6 +13,8 @@ import ErrorPage from './components/ErrorPage'
 import LoginPage from './components/LoginPage'
 import AdminPage from './components/AdminPage'
 
+require("dotenv").config()
+
 class App extends React.Component {
  
   render() {

@@ -1,6 +1,6 @@
 # KindCard
 
-I started the KindCard project to answer the question - "How much impact can a single act of kindness have?" I've always loved doing kind things for strangers, and I believe that one kind action can have a sort of "ripple effect" that promotes many more. I'm always curious about how to quantifity the abstract, and thus KindCard was born! 
+I started the KindCard project to answer the question - "How much impact can a single act of kindness have?" I've always loved doing kind things for strangers, and I believe that one kind action can have a sort of "ripple effect" that promotes many more. I'm always curious about how to quantify the abstract, and thus KindCard was born! 
 
 As of May 2020, hundreds of cards are in circulation in at least 7 different countries. The original version of the website was a simple landing page and form so that people could submit stories when they received a card. With the added visualization and interactivity of the new site, I hope that cards will be logged even more. 
 <br />
