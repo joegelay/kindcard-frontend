@@ -4,8 +4,7 @@ import { Redirect } from 'react-router-dom'
 import SecondaryHeader from './SecondaryHeader'
 import Footer from './Footer'
 import AllStories from './AllStories';
-
-
+ 
 export default function MyMapPage() {
 
     const [errorRedirect, setErrorRedirect] = useState(false);
