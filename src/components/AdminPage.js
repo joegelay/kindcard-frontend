@@ -5,7 +5,7 @@ import SecondaryHeader from './SecondaryHeader'
 import Footer from './Footer'
 import AllStories from './AllStories';
  
-export default function MyMapPage() {
+export default function AdminPage() {
 
     const [errorRedirect, setErrorRedirect] = useState(false);
     const [loading, setLoading] = useState(false);
