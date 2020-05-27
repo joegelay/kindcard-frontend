@@ -21,7 +21,7 @@ export default function EntryForm() {
                 lng: location.latLng.lng
             }
     
-            fetch('http://localhost:4000/stories', {
+            fetch(`${process.env.REACT_APP_API_URL}/stories`, {
                 method: 'POST', 
                 headers: {
                     'Content-Type': 'application/json'

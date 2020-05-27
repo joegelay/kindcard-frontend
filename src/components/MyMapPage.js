@@ -14,7 +14,7 @@ export default function MyMapPage() {
         const decodedJwt = jwt.decode(localStorage.getItem("token"))
         const userEmail = decodedJwt.email
         
-        fetch(`http://localhost:4000/stories/${userEmail}`)
+        fetch(`${process.env.REACT_APP_API_URL}/${userEmail}`)
             .then(response => response.json())
             .then(result => {
                 if (!result.userCards) {

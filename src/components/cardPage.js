@@ -11,7 +11,7 @@ export default function CardPage({ match }) {
     const [loading, setLoading] = useState(true);
     
     useEffect(() => {
-        fetch(`http://localhost:4000/cards/${match.params.id}`)
+        fetch(`${process.env.REACT_APP_API_URL}/cards/${match.params.id}`)
             .then(response => response.json())
             .then(result => {
                 if (!result.card) {

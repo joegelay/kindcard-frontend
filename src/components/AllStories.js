@@ -8,7 +8,7 @@ export default function AllStories() {
     const [storyData, setStoryData] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:4000/stories')
+        fetch(`${process.env.REACT_APP_API_URL}/stories`)
             .then(response => response.json())
             .then(storiesObj => {
                 const storyResults = storiesObj.stories
@@ -30,7 +30,7 @@ export default function AllStories() {
 
         const jwt = localStorage.getItem("token")
         
-        fetch(`http://localhost:4000/story/${storyId}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/story/${storyId}`, {
             method: 'DELETE', 
             headers: {
                     'Authorization': jwt

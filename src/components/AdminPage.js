@@ -14,7 +14,7 @@ export default function MyMapPage() {
     useEffect(() => {
         const jwt = localStorage.getItem("token")
         
-        fetch('http://localhost:4000/admin', {
+        fetch(`${process.env.REACT_APP_API_URL}/admin`, {
                 method: 'GET', 
                 headers: {
                     'Content-Type': 'application/json',

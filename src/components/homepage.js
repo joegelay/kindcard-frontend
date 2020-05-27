@@ -9,7 +9,7 @@ export default function Homepage() {
     const [markersData, setMarkersData] = useState([]);
     
     useEffect(() => {
-        fetch(`http://localhost:4000/stories/`)
+        fetch(`${process.env.REACT_APP_API_URL}/stories/`)
             .then(response => response.json())
             .then(stories => {
                 setMarkersData(stories.stories)
