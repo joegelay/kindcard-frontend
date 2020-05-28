@@ -25,9 +25,7 @@ There is no need to create and account or log in to explore most features of the
 
 ### Video Demo
 
-Coming soon!
-
-<!-- [![KindCard Walk-through Video](https://img.youtube.com/vi/Hp6zfkOzCyA/0.jpg)](https://www.youtube.com/watch?v=Hp6zfkOzCyA) -->
+[![KindCard Walk-through Video](https://img.youtube.com/vi/UNF6YMRWQWQ/0.jpg)](https://www.youtube.com/watch?v=UNF6YMRWQWQ)
 
 ### Author
 
