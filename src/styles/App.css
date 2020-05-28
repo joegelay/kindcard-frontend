@@ -634,6 +634,11 @@ textarea:invalid {
   input.search-input.search-control-input {
     padding: 0px 26px 0px 0px;
     width: 120px;
+    flex: 0 0 auto;
+  }
+
+  .search-control-info-list-item {
+    flex: 0 0 auto;
   }
 
   #card-page-header {
@@ -656,6 +661,7 @@ textarea:invalid {
     width: 85%;
     margin: 3rem 0rem 0rem 0rem;
     padding: 2rem 2rem;
+    flex-shrink: 0;
   }
 
   .end-title {
