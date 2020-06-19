@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { useForm } from 'react-hook-form'
-import {Redirect} from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import FormMap from './FormMap'
 
 export default function EntryForm() {
