@@ -12,6 +12,7 @@ import MyMapPage from './components/MyMapPage'
 import ErrorPage from './components/ErrorPage'
 import LoginPage from './components/LoginPage'
 import AdminPage from './components/AdminPage'
+import GA from './components/GoogleAnalytics'
 
 require("dotenv").config()
 
@@ -20,6 +21,7 @@ class App extends React.Component {
   render() {
     return (
       <HashRouter>  
+          { GA.init() && <GA.RouteTracker /> }
           <Route exact path="/" component={Homepage}/>
           <Route path="/cards/:id" component={CardPage}/>
           <Route path="/share-your-story" component={SubmitPage}/>
