@@ -10,7 +10,7 @@
     "jsonwebtoken": "^8.5.1",
     "leaflet": "^1.6.0",
     "leaflet-geosearch": "^2.7.0",
-    "moment": "^2.25.3",
+    "moment": "^2.29.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-ga": "^3.0.0",
