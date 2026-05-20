@@ -1,9 +1,9 @@
 import { demoCards, demoStories, demoUsers } from './demoData';
 
 const STORAGE_KEYS = {
-  cards: 'kindcard_cards',
-  stories: 'kindcard_stories',
-  users: 'kindcard_users',
+  cards: 'kindcard_cards_v2',
+  stories: 'kindcard_stories_v2',
+  users: 'kindcard_users_v2',
   token: 'token',
 };
 
