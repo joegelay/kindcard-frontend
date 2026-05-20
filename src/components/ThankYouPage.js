@@ -1,24 +1,40 @@
-import React from "react"
-import EndPage from "../layouts/EndPage"
+import React from 'react';
+import EndPage from '../layouts/EndPage';
 
-const title = "Thank you for sharing your story!"
-const description = <p>Stay tuned as we continue to add new features to the 
-site such as being able to see accolades for the most used cards, 
-featured stories, and much more. Until then, 
-follow us on <a className="a-link" href="https://www.instagram.com/kindcard_ig/" target='_blank' rel="noopener noreferrer">Instagram</a> and 
-keep spreading the kindness!</p>
+const title = 'Thank you for sharing your story!';
+const description = (
+  <p>
+    Your entry has been added to this archived version of KindCard.
+    <br></br>
+    <br></br>
+    In this revived site, new stories are saved locally in your browser so you
+    can still experience how the project worked and see your contribution on the
+    map.
+    <br></br>
+    <br></br>
+    You can also look back at the original project on{' '}
+    <a
+      className='a-link'
+      href='https://www.instagram.com/kindcard_ig/'
+      target='_blank'
+      rel='noopener noreferrer'
+    >
+      Instagram
+    </a>{' '}
+    and keep spreading the kindness.
+  </p>
+);
 
-const linkText = "Go back home"
-const linkTo = '/'
+const linkText = 'Go back home';
+const linkTo = '/';
 
 export default function ThankYouForSharingPage() {
-    return (
-        <EndPage
-            title={title}
-            description={description}
-            linkTo={linkTo}
-            linkText={linkText}
-        />
-    ) 
+  return (
+    <EndPage
+      title={title}
+      description={description}
+      linkTo={linkTo}
+      linkText={linkText}
+    />
+  );
 }
-  
