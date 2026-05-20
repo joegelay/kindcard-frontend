@@ -48,6 +48,10 @@ export default function Homepage() {
           View random card &rarr;
         </Link>
       </div>
+      <p id='homepage-archive-note'>
+        KindCard is preserved here as an archive of a once-live project, built
+        from its original submissions and stories.
+      </p>
       <Footer />
     </div>
   );

@@ -225,6 +225,15 @@ html {
   width: 100%;
 }
 
+#homepage-archive-note {
+  width: min(42rem, 90%);
+  margin: 1rem auto 0;
+
+  color: var(--blue-100);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
 .main-button {
   text-decoration: none;
   text-align: center;
@@ -577,6 +586,12 @@ textarea:invalid {
     justify-content: center;
 
     width: 80px;
+  }
+
+  #homepage-archive-note {
+    width: 88%;
+    margin-top: 1.25rem;
+    font-size: 0.95rem;
   }
 
   .main-button {
