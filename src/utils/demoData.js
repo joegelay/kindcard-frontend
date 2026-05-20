@@ -1,0 +1,102 @@
+export const demoCards = [
+  { id: 1, number: 101 },
+  { id: 2, number: 202 },
+  { id: 3, number: 303 },
+  { id: 4, number: 404 },
+  { id: 5, number: 505 },
+];
+
+export const demoStories = [
+  {
+    id: 1,
+    number: 101,
+    email: 'alex@example.com',
+    location: 'Austin, Texas, USA',
+    story: 'A stranger paid for my coffee while I was traveling alone.',
+    lat: 30.2672,
+    lng: -97.7431,
+    created_at: '2020-05-12T15:30:00.000Z',
+  },
+  {
+    id: 2,
+    number: 101,
+    email: 'alex@example.com',
+    location: 'Madrid, Spain',
+    story:
+      'I left a card at a hostel and got a message from someone the next week.',
+    lat: 40.4168,
+    lng: -3.7038,
+    created_at: '2020-06-08T10:00:00.000Z',
+  },
+  {
+    id: 3,
+    number: 202,
+    email: 'maya@example.com',
+    location: 'Nairobi, Kenya',
+    story: 'A bus driver waited while I ran back for a lost passport.',
+    lat: -1.2921,
+    lng: 36.8219,
+    created_at: '2020-06-21T09:20:00.000Z',
+  },
+  {
+    id: 4,
+    number: 202,
+    email: 'maya@example.com',
+    location: 'Lagos, Nigeria',
+    story: 'A family invited me in for dinner when a storm hit unexpectedly.',
+    lat: 6.5244,
+    lng: 3.3792,
+    created_at: '2020-07-03T18:45:00.000Z',
+  },
+  {
+    id: 5,
+    number: 303,
+    email: 'joegelay@gmail.com',
+    location: 'Montreal, Canada',
+    story: 'A neighbor shoveled my driveway before I woke up.',
+    lat: 45.5017,
+    lng: -73.5673,
+    created_at: '2020-07-28T14:15:00.000Z',
+  },
+  {
+    id: 6,
+    number: 404,
+    email: 'sam@example.com',
+    location: 'Tokyo, Japan',
+    story:
+      'Someone walked me to the right train platform even though they were late.',
+    lat: 35.6762,
+    lng: 139.6503,
+    created_at: '2020-08-09T06:05:00.000Z',
+  },
+  {
+    id: 7,
+    number: 404,
+    email: 'sam@example.com',
+    location: 'Seoul, South Korea',
+    story: 'A shopkeeper replaced my broken umbrella without charging me.',
+    lat: 37.5665,
+    lng: 126.978,
+    created_at: '2020-08-19T12:40:00.000Z',
+  },
+  {
+    id: 8,
+    number: 505,
+    email: 'nina@example.com',
+    location: 'Cape Town, South Africa',
+    story: 'A group of students helped me translate a long bus announcement.',
+    lat: -33.9249,
+    lng: 18.4241,
+    created_at: '2020-09-01T11:10:00.000Z',
+  },
+];
+
+export const demoUsers = [
+  {
+    id: 1,
+    email: 'joegelay@gmail.com',
+    password: 'kindcard-demo',
+    role: 'admin',
+    created_at: '2020-05-01T00:00:00.000Z',
+  },
+];

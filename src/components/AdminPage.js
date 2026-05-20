@@ -1,50 +1,42 @@
-import React, { useEffect, useState } from 'react'
-import { Redirect } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import { Redirect } from 'react-router-dom';
 
-import SecondaryHeader from './SecondaryHeader'
-import Footer from './Footer'
+import SecondaryHeader from './SecondaryHeader';
+import Footer from './Footer';
 import AllStories from './AllStories';
- 
+import { getCurrentUser, isAdminUser } from '../utils/demoStore';
+
 export default function AdminPage() {
+  const [errorRedirect, setErrorRedirect] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-    const [errorRedirect, setErrorRedirect] = useState(false);
-    const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    const currentUser = getCurrentUser();
 
-    useEffect(() => {
-        const jwt = localStorage.getItem("token")
-        
-        fetch(`${process.env.REACT_APP_API_URL}/admin`, {
-                method: 'GET', 
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': jwt
-                }
-            })
-            .then(response => response.json())
-            .catch((error) => {
-                setErrorRedirect(true)
-            });  
-
-            return () => setLoading(true)
-    }, [])
-
-    if (errorRedirect) {
-        return <Redirect to='/error' />
+    if (!isAdminUser(currentUser)) {
+      setErrorRedirect(true);
+      setLoading(false);
+      return;
     }
 
-    return (
-        <div className="App">
-            {loading && 
-                <p>Loading...</p>
-            }
-            {!loading &&
-            <>
-                <SecondaryHeader />
-                <h1 id="admin-header">Admin</h1>
-                <AllStories />
-                <Footer />     
-            </>
-            }
-        </div> 
-    );
+    setLoading(false);
+  }, []);
+
+  if (errorRedirect) {
+    return <Redirect to='/error' />;
+  }
+
+  return (
+    <div className='App'>
+      {loading && <p>Loading...</p>}
+      {!loading && (
+        <>
+          <SecondaryHeader />
+          <h1 id='admin-header'>Admin</h1>
+          <AllStories />
+          <Footer />
+        </>
+      )}
+    </div>
+  );
 }
